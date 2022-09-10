@@ -1,0 +1,31 @@
+---
+---
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/master.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{{site.baseurl}}/apple-touch-icon.png">
+  <link rel="shortcut icon" type="image/png" sizes="32x32" href="{{site.baseurl}}/favicon-32x32.png">
+  <link rel="shortcut icon" type="image/png" sizes="16x16" href="{{site.baseurl}}/favicon-16x16.png">
+  <link rel="manifest" href="{{site.basurl}}/site.webmanifest">
+
+  <title>{{ page.title }}</title>
+</head>
+
+<body>
+  {% include navbar.html %}
+  {{ content }}
+  <script src="{{ site.baseurl }}/js/master.js"></script>
+</body>
+
+</html>

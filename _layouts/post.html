@@ -1,0 +1,412 @@
+---
+layout: default
+---
+<div class="info_bar">
+  <img src="{{ site.baseurl }}/images/{{ page.logo }}" height="40px" width="40px" />
+  {% assign sum = 0 %}
+  {% for pt in page.points %}
+  {% assign sum = sum | plus: pt %}
+  {% endfor %}
+  {% assign finalScore = true %}
+  {% for c in page.correct %}
+  {% if c == '' %}
+  {% assign finalScore = false %}
+  {% endif %}
+  {% endfor %}
+  <h5>
+    {{ page.author }} - Score: {{ sum }}
+    {% if finalScore %}
+    - final
+    {% endif %}
+  </h5>
+</div>
+
+
+<section class="brack_post" id="bracket">
+  <div class="container">
+    <div class="split split-one">
+      <div class="round round-one current">
+        <div class="round-details">Round 1<br /><span class="date">March 17-18</span></div>
+        <ul class="matchup">
+          <li class="team team-top">Gonzaga<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Georgia St.<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Boise St.<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Memphis<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">UConn<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">New Mexico St.<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Arkansas<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Vermont<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Alabama<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Notre Dame<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Texas Tech.<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Montana St.<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Michigan St.<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Davidson<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Duke<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">CSU Fullerton<span class="score">&nbsp;</span></li>
+        </ul>
+
+        <ul class="matchup">
+          <li class="team team-top">Baylor<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Norfolk St.<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">North Carolina<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Marquette<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Saint Mary's<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Indiana<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">UCLA<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Akron<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Texas<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Virginia Tech<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Purdue<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Yale<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Murray St.<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">San Fransisco<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Kentucky<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">St. Peter's<span class="score">&nbsp;</span></li>
+        </ul>
+      </div> <!-- END ROUND ONE -->
+
+      <div class="round round-two">
+        <div class="round-details">Round 2<br /><span class="date">March 19-20</span></div>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[0] }}">{{ page.teams[0] }}<span class="score">{{ page.points[0]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[1] }}">{{ page.teams[1] }}<span class="score">{{ page.points[1]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[2] }}">{{ page.teams[2] }}<span class="score">{{ page.points[2]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[3] }}">{{ page.teams[3] }}<span class="score">{{ page.points[3]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[4] }}">{{ page.teams[4] }}<span class="score">{{ page.points[4]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[5] }}">{{ page.teams[5] }}<span class="score">{{ page.points[5]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[6] }}">{{ page.teams[6] }}<span class="score">{{ page.points[6]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[7] }}">{{ page.teams[7] }}<span class="score">{{ page.points[7]
+              }}</span></li>
+        </ul>
+
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[8] }}">{{ page.teams[8] }}<span class="score">{{ page.points[8]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[9] }}">{{ page.teams[9] }}<span class="score">{{ page.points[9]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[10] }}">{{ page.teams[10] }}<span class="score">{{ page.points[10]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[11] }}">{{ page.teams[11] }}<span class="score">{{ page.points[11]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[12] }}">{{ page.teams[12] }}<span class="score">{{ page.points[12]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[13] }}">{{ page.teams[13] }}<span class="score">{{ page.points[13]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[14] }}">{{ page.teams[14] }}<span class="score">{{ page.points[14]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[15] }}">{{ page.teams[15] }}<span class="score">{{ page.points[15]
+              }}</span></li>
+        </ul>
+      </div> <!-- END ROUND TWO -->
+
+      <div class="round round-three">
+        <div class="round-details">Sweet 16<br /><span class="date">March 24-25</span></div>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[16] }}">{{ page.teams[16] }}<span class="score">{{ page.points[16]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[17] }}">{{ page.teams[17] }}<span class="score">{{ page.points[17]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[18] }}">{{ page.teams[18] }}<span class="score">{{ page.points[18]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[19] }}">{{ page.teams[19] }}<span class="score">{{ page.points[19]
+              }}</span></li>
+        </ul>
+
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[20] }}">{{ page.teams[20] }}<span class="score">{{ page.points[20]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[21] }}">{{ page.teams[21] }}<span class="score">{{ page.points[21]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[22] }}">{{ page.teams[22] }}<span class="score">{{ page.points[22]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[23] }}">{{ page.teams[23] }}<span class="score">{{ page.points[23]
+              }}</span></li>
+        </ul>
+      </div> <!-- END ROUND THREE -->
+
+      <div class="round round-four">
+        <div class="round-details">Elite 8<br /><span class="date">March 26-27</span></div>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[24] }}">{{ page.teams[24] }}<span class="score">{{ page.points[24]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[25] }}">{{ page.teams[25] }}<span class="score">{{ page.points[25]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[26] }}">{{ page.teams[26] }}<span class="score">{{ page.points[26]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[27] }}">{{ page.teams[27] }}<span class="score">{{ page.points[27]
+              }}</span></li>
+        </ul>
+      </div> <!-- END ROUND FOUR -->
+    </div>
+
+    <div class="champion">
+      <div class="semis-l">
+        <div class="round-details">semifinals <br /><span class="date">April 2</span></div>
+        <ul class="matchup championship">
+          <li class="team team-top {{ page.correct[28] }}">{{ page.teams[28] }}<span class="score">{{
+              page.points[28]
+              }}</span>
+          </li>
+          <li class="team team-bottom {{ page.correct[29] }}">{{ page.teams[29] }}<span class="score">{{
+              page.points[29]
+              }}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="final">
+        <i class="fa fa-trophy"></i>
+        <div class="round-details">championship <br /><span class="date">April 4</span></div>
+        <ul class="matchup championship">
+          <li class="team team-top {{ page.correct[30] }}">{{ page.teams[30] }}<span class="score">{{
+              page.points[30]
+              }}</span>
+          </li>
+          <li class="team team-bottom {{ page.correct[32] }}">{{ page.teams[32] }}<span class="score">{{
+              page.points[32]
+              }}</span>
+          </li>
+        </ul>
+        <div class="round-details winner-pick {{ page.correct[31] }}">Winner: {{ page.teams[31] }} - {{ page.points[31]
+          }}</div>
+      </div>
+      <div class="semis-r">
+        <div class="round-details">semifinals <br /><span class="date">April 2</span></div>
+        <ul class="matchup championship">
+          <li class="team team-top {{ page.correct[33] }}">{{ page.teams[33] }}<span class="score">{{
+              page.points[33]
+              }}</span>
+          </li>
+          <li class="team team-bottom {{ page.correct[34] }}">{{ page.teams[34] }}<span class="score">{{
+              page.points[34]
+              }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <div class="split split-two">
+
+      <div class="round round-four">
+        <div class="round-details">Elite 8<br /><span class="date">March 26-27</span></div>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[35] }}">{{ page.teams[35] }}<span class="score">{{ page.points[35]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[36] }}">{{ page.teams[36] }}<span class="score">{{ page.points[36]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[37] }}">{{ page.teams[37] }}<span class="score">{{ page.points[37]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[38] }}">{{ page.teams[38] }}<span class="score">{{ page.points[38]
+              }}</span></li>
+        </ul>
+      </div> <!-- END ROUND FOUR -->
+
+      <div class="round round-three">
+        <div class="round-details">Sweet 16<br /><span class="date">March 24-25</span></div>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[39] }}">{{ page.teams[39] }}<span class="score">{{ page.points[39]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[40] }}">{{ page.teams[40] }}<span class="score">{{ page.points[40]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[41] }}">{{ page.teams[41] }}<span class="score">{{ page.points[41]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[42] }}">{{ page.teams[42] }}<span class="score">{{ page.points[42]
+              }}</span></li>
+        </ul>
+
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[43] }}">{{ page.teams[43] }}<span class="score">{{ page.points[43]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[44] }}">{{ page.teams[44] }}<span class="score">{{ page.points[44]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[45] }}">{{ page.teams[45] }}<span class="score">{{ page.points[45]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[46] }}">{{ page.teams[46] }}<span class="score">{{ page.points[46]
+              }}</span></li>
+        </ul>
+      </div> <!-- END ROUND THREE -->
+
+      <div class="round round-two">
+        <div class="round-details">Round 2<br /><span class="date">March 19-20</span></div>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[47] }}">{{ page.teams[47] }}<span class="score">{{ page.points[47]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[48] }}">{{ page.teams[48] }}<span class="score">{{ page.points[48]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[49] }}">{{ page.teams[49] }}<span class="score">{{ page.points[49]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[50] }}">{{ page.teams[50] }}<span class="score">{{ page.points[50]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[51] }}">{{ page.teams[51] }}<span class="score">{{ page.points[51]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[52] }}">{{ page.teams[52] }}<span class="score">{{ page.points[52]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[53] }}">{{ page.teams[53] }}<span class="score">{{ page.points[53]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[54] }}">{{ page.teams[54] }}<span class="score">{{ page.points[54]
+              }}</span></li>
+        </ul>
+
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[55] }}">{{ page.teams[55] }}<span class="score">{{ page.points[55]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[56] }}">{{ page.teams[56] }}<span class="score">{{ page.points[56]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[57] }}">{{ page.teams[57] }}<span class="score">{{ page.points[57]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[58] }}">{{ page.teams[58] }}<span class="score">{{ page.points[58]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[59] }}">{{ page.teams[59] }}<span class="score">{{ page.points[59]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[60] }}">{{ page.teams[60] }}<span class="score">{{ page.points[60]
+              }}</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top {{ page.correct[61] }}">{{ page.teams[61] }}<span class="score">{{ page.points[61]
+              }}</span></li>
+          <li class="team team-bottom {{ page.correct[62] }}">{{ page.teams[62] }}<span class="score">{{ page.points[62]
+              }}</span></li>
+        </ul>
+      </div> <!-- END ROUND TWO -->
+
+      <div class="round round-one current">
+        <div class="round-details">Round 1<br /><span class="date">March 17-18</span></div>
+        <ul class="matchup">
+          <li class="team team-top">Arizona<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Wright St.<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Seton Hall<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">TCU<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Houston<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">UAB<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Illinois<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Chattanooga<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Colorado St.<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Michigan<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Tennessee<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Longwood<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Ohio St.<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Loyola Chicago<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Villanova<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Delaware<span class="score">&nbsp;</span></li>
+        </ul>
+
+        <ul class="matchup">
+          <li class="team team-top">Kansas<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">TX Southern<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">San Diego St.<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Creighton<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Iowa<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Richmond<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Providence<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">South Dakota St.<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">LSU<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Iowa St.<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Wisconsin<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Colgate<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">USC<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Miami<span class="score">&nbsp;</span></li>
+        </ul>
+        <ul class="matchup">
+          <li class="team team-top">Auburn<span class="score">&nbsp;</span></li>
+          <li class="team team-bottom">Jacksonville St.<span class="score">&nbsp;</span></li>
+        </ul>
+      </div> <!-- END ROUND ONE -->
+    </div>
+  </div>
+</section>
