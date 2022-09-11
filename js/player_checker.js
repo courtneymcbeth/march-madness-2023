@@ -13,7 +13,7 @@ fetch('authorized.txt')
 function setDisplay(text) {
   console.log(text);
 
-  const found = text.includes(fullname) && fname && lname;
+  const found = text.includes(fullname) && fname[0] && lname[0];
   if (!found) {
     document.getElementById("auth_label").innerText = "Sorry, you are not authorized to join...";
   } else {
