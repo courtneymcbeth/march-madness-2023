@@ -26,6 +26,7 @@ if (typeof temp_code !== "undefined") {
   xhr.setRequestHeader('Accept', 'application/json');
   xhr.onreadystatechange = function () { // Call a function when the state changes.
     if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
+      console.log("got response");
       var ret_data = JSON.parse(this.responseText);
       var redir = 'https://courtneymcbeth.github.io/march-madness-2023/bracket_maker';
       redir += '?auth=';
@@ -34,6 +35,7 @@ if (typeof temp_code !== "undefined") {
     }
   }
   xhr.send();
+  console.log("sent request");
 } else {
   // somehow bypassed, send them back
   window.location.replace('https://courtneymcbeth.github.io/march-madness-2023/bracket_creator');
