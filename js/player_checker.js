@@ -17,6 +17,6 @@ function setDisplay(text) {
   if (!found) {
     document.getElementById("auth_label").innerText = "Sorry, you are not authorized to join...";
   } else {
-    location.href = "https://github.com/login/oauth/authorize?client_id=1e8252b09f2cc75138a2&scope=public_repo read:user&redirect_uri=https://courtneymcbeth.github.io/march-madness-2023/logged_in";
+    location.href = "https://github.com/login/oauth/authorize?client_id=1e8252b09f2cc75138a2&scope=read:user&redirect_uri=https://courtneymcbeth.github.io/march-madness-2023/logged_in";
   }
 }
