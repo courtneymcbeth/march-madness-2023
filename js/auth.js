@@ -14,8 +14,8 @@ function getQueryVariable(variable) {
 var temp_code = getQueryVariable('code');
 
 if (typeof temp_code !== "undefined") {
-  // var access_url = 'https://cors-anywhere.herokuapp.com/';
-  var access_url = 'https://github.com/login/oauth/access_token';
+  var access_url = 'https://cors.io/?';
+  access_url += 'https://github.com/login/oauth/access_token';
   access_url += '?client_id=1e8252b09f2cc75138a2';
   access_url += '&client_secret=56f8e566957449b8ae9a2c5b0ced45a7b8226224';
   access_url += '&code=';
