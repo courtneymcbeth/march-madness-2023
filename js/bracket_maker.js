@@ -77,40 +77,40 @@ function AddListeners() {
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("west-r1-" + i.toString()).children;
     children[0].addEventListener("click", function () {
-      setNextOnClick("west-r1-" + i.toString(), 0, children[0].innerText.slice(1));
+      setNextOnClick("west-r1-" + i.toString(), 0, (" " + children[0].innerText).slice(1));
     });
     children[1].addEventListener("click", function () {
-      setNextOnClick("west-r1-" + i.toString(), 1, children[1].innerText.slice(1));
+      setNextOnClick("west-r1-" + i.toString(), 1, (" " + children[1].innerText).slice(1));
     });
   }
 
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("east-r1-" + i.toString()).children;
     children[0].addEventListener("click", function () {
-      setNextOnClick("east-r1-" + i.toString(), 0, children[0].innerText.slice(1));
+      setNextOnClick("east-r1-" + i.toString(), 0, (" " + children[0].innerText).slice(1));
     });
     children[1].addEventListener("click", function () {
-      setNextOnClick("east-r1-" + i.toString(), 1, children[1].innerText.slice(1));
+      setNextOnClick("east-r1-" + i.toString(), 1, (" " + children[1].innerText).slice(1));
     });
   }
 
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("south-r1-" + i.toString()).children;
     children[0].addEventListener("click", function () {
-      setNextOnClick("south-r1-" + i.toString(), 0, children[0].innerText.slice(1));
+      setNextOnClick("south-r1-" + i.toString(), 0, (" " + children[0].innerText).slice(1));
     });
     children[1].addEventListener("click", function () {
-      setNextOnClick("south-r1-" + i.toString(), 1, children[1].innerText.slice(1));
+      setNextOnClick("south-r1-" + i.toString(), 1, (" " + children[1].innerText).slice(1));
     });
   }
 
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("midwest-r1-" + i.toString()).children;
     children[0].addEventListener("click", function () {
-      setNextOnClick("midwest-r1-" + i.toString(), 0, children[0].innerText.slice(1));
+      setNextOnClick("midwest-r1-" + i.toString(), 0, (" " + children[0].innerText).slice(1));
     });
     children[1].addEventListener("click", function () {
-      setNextOnClick("midwest-r1-" + i.toString(), 1, children[1].innerText.slice(1));
+      setNextOnClick("midwest-r1-" + i.toString(), 1, (" " + children[1].innerText).slice(1));
     });
   }
 }
@@ -122,8 +122,8 @@ function setNextOnClick(id, pos, text) {
 
   const idSplit = id.split("-");
   if (idSplit[1] === "r1") {
-    var num = parseInt(idSplit[2][1]);
-    console.log(idSplit[2][1]);
+    var num = parseInt(idSplit[2]);
+    console.log(idSplit[2]);
     console.log(num);
     var newNum = Math.ceil(num / 2);
     var newPos = (num + 1) % 2;
