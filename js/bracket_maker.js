@@ -1,3 +1,6 @@
+var obj = {};
+var numEmpty = 63;
+
 /**
  * Decodes the url to get the requested parameter (for this page, 'auth')
  * @param {string} variable - the variable name
@@ -36,6 +39,7 @@ function populateFirstRound() {
 }
 
 function fillInBlanks(data) {
+  obj = data;
   var children = [];
   var idx = 0;
 
@@ -277,6 +281,7 @@ function setNextOnClick(id, pos) {
     if (children[clearPos].innerText === otherTeam) {
       children[clearPos].innerText = "";
       clearIdSplit = clearId.split("-");
+      numEmpty = numEmpty + 1;
     }
   }
   if (clearIdSplit[1] === "r2") {
@@ -288,6 +293,7 @@ function setNextOnClick(id, pos) {
     if (children[clearPos].innerText === otherTeam) {
       children[clearPos].innerText = "";
       clearIdSplit = clearId.split("-");
+      numEmpty = numEmpty + 1;
     }
   }
   if (clearIdSplit[1] === "r3") {
@@ -299,6 +305,7 @@ function setNextOnClick(id, pos) {
     if (children[clearPos].innerText === otherTeam) {
       children[clearPos].innerText = "";
       clearIdSplit = clearId.split("-");
+      numEmpty = numEmpty + 1;
     }
   }
   if (clearIdSplit[1] === "r4") {
@@ -307,24 +314,28 @@ function setNextOnClick(id, pos) {
       if (children[0].innerText === otherTeam) {
         children[0].innerText = "";
         clearId = "f4-east-west";
+        numEmpty = numEmpty + 1;
       }
     } else if (clearIdSplit[0] === "east") {
       var children = document.getElementById("f4-east-west").children;
       if (children[1].innerText === otherTeam) {
         children[1].innerText = "";
         clearId = "f4-east-west";
+        numEmpty = numEmpty + 1;
       }
     } else if (clearIdSplit[0] === "south") {
       var children = document.getElementById("f4-south-midwest").children;
       if (children[0].innerText === otherTeam) {
         children[0].innerText = "";
         clearId = "f4-south-midwest";
+        numEmpty = numEmpty + 1;
       }
     } else if (clearIdSplit[0] === "midwest") {
       var children = document.getElementById("f4-south-midwest").children;
       if (children[1].innerText === otherTeam) {
         children[1].innerText = "";
         clearId = "f4-south-midwest";
+        numEmpty = numEmpty + 1;
       }
     }
   }
@@ -333,6 +344,7 @@ function setNextOnClick(id, pos) {
     if (children[0].innerText === otherTeam) {
       children[0].innerText = "";
       clearId = "f4-championship";
+      numEmpty = numEmpty + 1;
     }
   }
   if (clearId === "f4-south-midwest") {
@@ -340,13 +352,16 @@ function setNextOnClick(id, pos) {
     if (children[1].innerText === otherTeam) {
       children[1].innerText = "";
       clearId = "f4-championship";
+      numEmpty = numEmpty + 1;
     }
   }
   if (clearId === "f4-championship" && document.getElementById("f4-winner").innerText.includes(otherTeam)) {
     document.getElementById("f4-winner").innerText = "Winner: ";
+    numEmpty = numEmpty + 1;
   }
 
   // Set the text of the next round match
+  numEmpty = numEmpty - 1;
   const idSplit = id.split("-");
   if (idSplit[1] === "r1") {
     var num = parseInt(idSplit[2]);
@@ -355,6 +370,7 @@ function setNextOnClick(id, pos) {
     var newId = idSplit[0] + "-r2-" + newNum.toString();
     var children = document.getElementById(newId).children;
     children[newPos].innerText = document.getElementById(id).children[pos].innerText;
+    obj[idSplit[0]]["second"][newNum] = children[newPos].innerText;
   } else if (idSplit[1] === "r2") {
     var num = parseInt(idSplit[2]);
     var newNum = Math.ceil(num / 2);
@@ -362,6 +378,7 @@ function setNextOnClick(id, pos) {
     var newId = idSplit[0] + "-r3-" + newNum.toString();
     var children = document.getElementById(newId).children;
     children[newPos].innerText = document.getElementById(id).children[pos].innerText;
+    obj[idSplit[0]]["sweet16"][newNum] = children[newPos].innerText;
   } else if (idSplit[1] === "r3") {
     var num = parseInt(idSplit[2]);
     var newNum = Math.ceil(num / 2);
@@ -369,27 +386,66 @@ function setNextOnClick(id, pos) {
     var newId = idSplit[0] + "-r4";
     var children = document.getElementById(newId).children;
     children[newPos].innerText = document.getElementById(id).children[pos].innerText;
+    obj[idSplit[0]]["elite8"][newNum] = children[newPos].innerText;
   } else if (idSplit[1] === "r4") {
     if (idSplit[0] === "west") {
       var children = document.getElementById("f4-east-west").children;
       children[0].innerText = document.getElementById(id).children[pos].innerText;
+      obj["final4"]["west"] = children[0].innerText;
     } else if (idSplit[0] === "east") {
       var children = document.getElementById("f4-east-west").children;
       children[1].innerText = document.getElementById(id).children[pos].innerText;
+      obj["final4"]["east"] = children[1].innerText;
     } else if (idSplit[0] === "south") {
       var children = document.getElementById("f4-south-midwest").children;
       children[0].innerText = document.getElementById(id).children[pos].innerText;
+      obj["final4"]["south"] = children[0].innerText;
     } else if (idSplit[0] === "midwest") {
       var children = document.getElementById("f4-south-midwest").children;
       children[1].innerText = document.getElementById(id).children[pos].innerText;
+      obj["final4"]["midwest"] = children[1].innerText;
     }
   } else if (id === "f4-east-west") {
     var children = document.getElementById("f4-championship").children;
     children[0].innerText = document.getElementById(id).children[pos].innerText;
+    obj["championship"]["east-west"] = children[0].innerText;
   } else if (id === "f4-south-midwest") {
     var children = document.getElementById("f4-championship").children;
     children[1].innerText = document.getElementById(id).children[pos].innerText;
+    obj["championship"]["south-midwest"] = children[1].innerText;
   } else if (id === "f4-championship") {
     document.getElementById("f4-winner").innerText = "Winner: " + document.getElementById(id).children[pos].innerText;
+    obj["championship"]["winner"] = document.getElementById("f4-winner").innerText;
   }
+}
+
+function checkSubmission() {
+  if (numEmpty > 0) {
+    document.getElementById("note").innerText = "Please fill in any blanks before submitting.";
+    document.getElementById("note").style.color = "red";
+    return;
+  }
+
+  var auth_code = getQueryVariable('auth');
+  var post_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues';
+
+  var req = new Object();
+  req.title = "Bracket Test";
+  req.body = JSON.stringify(obj);
+
+  var jsonString = JSON.stringify(req);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", post_url, true);
+  var token = 'token ' + auth_code;
+  xhr.setRequestHeader('Authorization', token);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  xhr.onreadystatechange = function () {
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 201) {
+      var ret_data = JSON.parse(this.responseText);
+      console.log(ret_data)
+    }
+  }
+  xhr.send(jsonString);
 }
