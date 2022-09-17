@@ -258,6 +258,12 @@ function setNextOnClick(id, pos) {
     return;
   }
 
+  var otherPos = 0;
+  if (pos == 0) {
+    otherPos = 1;
+  }
+  var otherTeam = document.getElementById(id).children[otherPos].innerText;
+
   // Clear the existing boxes with 
   var clearId = id;
   var clearPos = pos;
@@ -268,8 +274,10 @@ function setNextOnClick(id, pos) {
     clearPos = (num + 1) % 2;
     clearId = clearIdSplit[0] + "-r2-" + newNum.toString();
     var children = document.getElementById(clearId).children;
-    children[clearPos].innerText = "";
-    clearIdSplit = clearId.split("-");
+    if (children[clearPos].innerText === otherTeam) {
+      children[clearPos].innerText = "";
+      clearIdSplit = clearId.split("-");
+    }
   }
   if (clearIdSplit[1] === "r2") {
     var num = parseInt(clearIdSplit[2]);
@@ -277,8 +285,10 @@ function setNextOnClick(id, pos) {
     clearPos = (num + 1) % 2;
     clearId = clearIdSplit[0] + "-r3-" + newNum.toString();
     var children = document.getElementById(clearId).children;
-    children[clearPos].innerText = "";
-    clearIdSplit = clearId.split("-");
+    if (children[clearPos].innerText === otherTeam) {
+      children[clearPos].innerText = "";
+      clearIdSplit = clearId.split("-");
+    }
   }
   if (clearIdSplit[1] === "r3") {
     var num = parseInt(clearIdSplit[2]);
@@ -286,39 +296,53 @@ function setNextOnClick(id, pos) {
     clearPos = (num + 1) % 2;
     clearId = clearIdSplit[0] + "-r4";
     var children = document.getElementById(clearId).children;
-    children[clearPos].innerText = "";
-    clearIdSplit = clearId.split("-");
+    if (children[clearPos].innerText === otherTeam) {
+      children[clearPos].innerText = "";
+      clearIdSplit = clearId.split("-");
+    }
   }
   if (clearIdSplit[1] === "r4") {
     if (clearIdSplit[0] === "west") {
       var children = document.getElementById("f4-east-west").children;
-      children[0].innerText = "";
-      clearId = "f4-east-west";
+      if (children[0].innerText === otherTeam) {
+        children[0].innerText = "";
+        clearId = "f4-east-west";
+      }
     } else if (clearIdSplit[0] === "east") {
       var children = document.getElementById("f4-east-west").children;
-      children[1].innerText = "";
-      clearId = "f4-east-west";
+      if (children[1].innerText === otherTeam) {
+        children[1].innerText = "";
+        clearId = "f4-east-west";
+      }
     } else if (clearIdSplit[0] === "south") {
       var children = document.getElementById("f4-south-midwest").children;
-      children[0].innerText = "";
-      clearId = "f4-south-midwest";
+      if (children[0].innerText === otherTeam) {
+        children[0].innerText = "";
+        clearId = "f4-south-midwest";
+      }
     } else if (clearIdSplit[0] === "midwest") {
       var children = document.getElementById("f4-south-midwest").children;
-      children[1].innerText = "";
-      clearId = "f4-south-midwest";
+      if (children[1].innerText === otherTeam) {
+        children[1].innerText = "";
+        clearId = "f4-south-midwest";
+      }
     }
   }
   if (clearId === "f4-east-west") {
     var children = document.getElementById("f4-championship").children;
-    children[0].innerText = "";
-    clearId = "f4-championship";
+    if (children[0].innerText === otherTeam) {
+      children[0].innerText = "";
+      clearId = "f4-championship";
+    }
   }
   if (clearId === "f4-south-midwest") {
     var children = document.getElementById("f4-championship").children;
-    children[1].innerText = "";
-    clearId = "f4-championship";
+    if (children[1].innerText === otherTeam) {
+      children[1].innerText = "";
+      clearId = "f4-championship";
+    }
   }
-  if (clearId === "f4-championship") {
+  if (clearId === "f4-championship" && document.getElementById("f4-winner").innerText === otherTeam) {
     document.getElementById("f4-winner").innerText = "Winner: ";
   }
 
