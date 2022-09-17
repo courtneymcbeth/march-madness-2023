@@ -39,7 +39,7 @@ function fillInBlanks(data) {
   var children = [];
   var idx = 0;
 
-  for (let i = 0; i < 8; i++) {
+  for (let i = 1; i < 9; i++) {
     children = document.getElementById("west-r1-" + i.toString()).children;
     children[0].innerText = data.west.first[idx];
     children[1].innerText = data.west.first[idx + 1];
@@ -47,7 +47,7 @@ function fillInBlanks(data) {
   }
 
   idx = 0;
-  for (let i = 0; i < 8; i++) {
+  for (let i = 1; i < 9; i++) {
     children = document.getElementById("east-r1-" + i.toString()).children;
     children[0].innerText = data.east.first[idx];
     children[1].innerText = data.east.first[idx + 1];
@@ -55,7 +55,7 @@ function fillInBlanks(data) {
   }
 
   idx = 0;
-  for (let i = 0; i < 8; i++) {
+  for (let i = 1; i < 9; i++) {
     children = document.getElementById("south-r1-" + i.toString()).children;
     children[0].innerText = data.south.first[idx];
     children[1].innerText = data.south.first[idx + 1];
@@ -63,7 +63,7 @@ function fillInBlanks(data) {
   }
 
   idx = 0;
-  for (let i = 0; i < 8; i++) {
+  for (let i = 1; i < 9; i++) {
     children = document.getElementById("midwest-r1-" + i.toString()).children;
     children[0].innerText = data.midwest.first[idx];
     children[1].innerText = data.midwest.first[idx + 1];
