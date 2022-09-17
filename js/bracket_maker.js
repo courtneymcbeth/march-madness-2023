@@ -342,7 +342,7 @@ function setNextOnClick(id, pos) {
       clearId = "f4-championship";
     }
   }
-  if (clearId === "f4-championship" && document.getElementById("f4-winner").innerText === otherTeam) {
+  if (clearId === "f4-championship" && document.getElementById("f4-winner").innerText.includes(otherTeam)) {
     document.getElementById("f4-winner").innerText = "Winner: ";
   }
 
