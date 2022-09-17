@@ -115,21 +115,24 @@ function AddListeners() {
   }
 }
 
-function setNextOnClick(id, pos, text) {
-  console.log(id);
-  console.log(pos);
-  console.log(text);
+function setNextOnClick(id, pos) {
+  if (document.getElementById(id).children[pos].innerText.length < 1) {
+    return;
+  }
 
   const idSplit = id.split("-");
   if (idSplit[1] === "r1") {
     var num = parseInt(idSplit[2]);
-    console.log(idSplit[2]);
-    console.log(num);
     var newNum = Math.ceil(num / 2);
     var newPos = (num + 1) % 2;
     var newId = idSplit[0] + "-r2-" + newNum.toString();
-    console.log(newId);
-    console.log(newPos);
+    var children = document.getElementById(newId).children;
+    children[newPos].innerText = document.getElementById(id).children[pos].innerText;
+  } else if (idSplit[1] === "r2") {
+    var num = parseInt(idSplit[2]);
+    var newNum = Math.ceil(num / 2);
+    var newPos = (num + 1) % 2;
+    var newId = idSplit[0] + "-r3-" + newNum.toString();
     var children = document.getElementById(newId).children;
     children[newPos].innerText = document.getElementById(id).children[pos].innerText;
   }
