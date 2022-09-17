@@ -1,0 +1,173 @@
+{
+  "west": {
+    "first": [
+      "Gonzaga",
+      "Georgia St.",
+      "Boise St.",
+      "Memphis",
+      "UConn",
+      "New Mexico St.",
+      "Arkansas",
+      "Vermont",
+      "Alabama",
+      "Notre Dame",
+      "Texas Tech",
+      "Montana St.",
+      "Michigan St.",
+      "Davidson",
+      "Duke",
+      "Cal St. Fullerton"
+    ],
+    "second": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sweet16": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "elite8": [
+      "",
+      ""
+    ]
+  },
+  "east": {
+    "first": [
+      "Baylor",
+      "Norfolk St.",
+      "North Carolina",
+      "Marquette",
+      "Saint Mary's",
+      "Indiana",
+      "UCLA",
+      "Akron",
+      "Texas",
+      "Virginia Tech",
+      "Purdue",
+      "Yale",
+      "Murray St.",
+      "San Fransisco",
+      "Kentucky",
+      "Saint Peter's"
+    ],
+    "second": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sweet16": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "elite8": [
+      "",
+      ""
+    ]
+  },
+  "south": {
+    "first": [
+      "Arizona",
+      "Wright St.",
+      "Seton Hall",
+      "TCU",
+      "Houston",
+      "UAB",
+      "Illinois",
+      "Chattanooga",
+      "Colorado St.",
+      "Michigan",
+      "Tennessee",
+      "Longwood",
+      "Ohio St.",
+      "Loyola Chicago",
+      "Villanova",
+      "Delaware"
+    ],
+    "second": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sweet16": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "elite8": [
+      "",
+      ""
+    ]
+  },
+  "midwest": {
+    "first": [
+      "Kansas",
+      "Texas Southern",
+      "San Diego St.",
+      "Creighton",
+      "Iowa",
+      "Richmond",
+      "Providence",
+      "South Dakota St.",
+      "LSU",
+      "Iowa St.",
+      "Wisconsin",
+      "Colgate",
+      "USC",
+      "Miami",
+      "Auburn",
+      "Jacksonville St."
+    ],
+    "second": [
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "sweet16": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "elite8": [
+      "",
+      ""
+    ]
+  },
+  "final4": {
+    "east": "",
+    "west": "",
+    "south": "",
+    "midwest": ""
+  },
+  "championship": {
+    "east-west": "",
+    "south-midwest": "",
+    "winner": ""
+  }
+}
