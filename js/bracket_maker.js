@@ -104,6 +104,16 @@ function AddListeners() {
     });
   }
 
+  for (let i = 1; i < 2; i++) {
+    children = document.getElementById("west-r4-" + i.toString()).children;
+    children[0].addEventListener("click", function () {
+      setNextOnClick("west-r4-" + i.toString(), 0);
+    });
+    children[1].addEventListener("click", function () {
+      setNextOnClick("west-r4-" + i.toString(), 1);
+    });
+  }
+
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("east-r1-" + i.toString()).children;
     children[0].addEventListener("click", function () {
@@ -134,6 +144,24 @@ function AddListeners() {
     });
   }
 
+  for (let i = 1; i < 2; i++) {
+    children = document.getElementById("east-r4-" + i.toString()).children;
+    children[0].addEventListener("click", function () {
+      setNextOnClick("east-r4-" + i.toString(), 0);
+    });
+    children[1].addEventListener("click", function () {
+      setNextOnClick("east-r4-" + i.toString(), 1);
+    });
+  }
+
+  children = document.getElementById("f4-east-west").children;
+  children[0].addEventListener("click", function () {
+    setNextOnClick("f4-east-west", 0);
+  });
+  children[1].addEventListener("click", function () {
+    setNextOnClick("f4-east-west", 1);
+  });
+
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("south-r1-" + i.toString()).children;
     children[0].addEventListener("click", function () {
@@ -161,6 +189,16 @@ function AddListeners() {
     });
     children[1].addEventListener("click", function () {
       setNextOnClick("south-r3-" + i.toString(), 1);
+    });
+  }
+
+  for (let i = 1; i < 2; i++) {
+    children = document.getElementById("south-r4-" + i.toString()).children;
+    children[0].addEventListener("click", function () {
+      setNextOnClick("south-r4-" + i.toString(), 0);
+    });
+    children[1].addEventListener("click", function () {
+      setNextOnClick("south-r4-" + i.toString(), 1);
     });
   }
 
@@ -193,6 +231,32 @@ function AddListeners() {
       setNextOnClick("midwest-r3-" + i.toString(), 1);
     });
   }
+
+  for (let i = 1; i < 2; i++) {
+    children = document.getElementById("midwest-r4-" + i.toString()).children;
+    children[0].addEventListener("click", function () {
+      setNextOnClick("midwest-r4-" + i.toString(), 0);
+    });
+    children[1].addEventListener("click", function () {
+      setNextOnClick("midwest-r4-" + i.toString(), 1);
+    });
+  }
+
+  children = document.getElementById("f4-south-midwest").children;
+  children[0].addEventListener("click", function () {
+    setNextOnClick("f4-south-midwest", 0);
+  });
+  children[1].addEventListener("click", function () {
+    setNextOnClick("f4-south-midwest", 1);
+  });
+
+  children = document.getElementById("f4-championship").children;
+  children[0].addEventListener("click", function () {
+    setNextOnClick("f4-championship", 0);
+  });
+  children[1].addEventListener("click", function () {
+    setNextOnClick("f4-championship", 1);
+  });
 }
 
 function setNextOnClick(id, pos) {
@@ -222,5 +286,27 @@ function setNextOnClick(id, pos) {
     var newId = idSplit[0] + "-r4-" + newNum.toString();
     var children = document.getElementById(newId).children;
     children[newPos].innerText = document.getElementById(id).children[pos].innerText;
+  } else if (idSplit[1] === "r4") {
+    if (idSplit[0] === "west") {
+      var children = document.getElementById("f4-east-west").children;
+      children[0].innerText = document.getElementById(id).children[pos].innerText;
+    } else if (idSplit[0] === "east") {
+      var children = document.getElementById("f4-east-west").children;
+      children[1].innerText = document.getElementById(id).children[pos].innerText;
+    } else if (idSplit[0] === "south") {
+      var children = document.getElementById("f4-south-midwest").children;
+      children[0].innerText = document.getElementById(id).children[pos].innerText;
+    } else if (idSplit[0] === "midwest") {
+      var children = document.getElementById("f4-south-midwest").children;
+      children[1].innerText = document.getElementById(id).children[pos].innerText;
+    }
+  } else if (id === "f4-east-west") {
+    var children = document.getElementById("f4-championship").children;
+    children[0].innerText = document.getElementById(id).children[pos].innerText;
+  } else if (id === "f4-south-midwest") {
+    var children = document.getElementById("f4-championship").children;
+    children[1].innerText = document.getElementById(id).children[pos].innerText;
+  } else if (id === "f4-championship") {
+    document.getElementById("f4-winner").innerText = document.getElementById(id).children[pos].innerText;
   }
 }
