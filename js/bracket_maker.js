@@ -38,33 +38,33 @@ function populateFirstRound() {
 function fillInBlanks(data) {
   var children = document.getElementById("west-r1-1").children;
   children[0].innerText = data.west.first[0];
-  children[0].innerText = data.west.first[1];
+  children[1].innerText = data.west.first[1];
 
   children = document.getElementById("west-r1-2").children;
   children[0].innerText = data.west.first[2];
-  children[0].innerText = data.west.first[3];
+  children[1].innerText = data.west.first[3];
 
   children = document.getElementById("west-r1-3").children;
   children[0].innerText = data.west.first[4];
-  children[0].innerText = data.west.first[5];
+  children[1].innerText = data.west.first[5];
 
   children = document.getElementById("west-r1-4").children;
   children[0].innerText = data.west.first[6];
-  children[0].innerText = data.west.first[7];
+  children[1].innerText = data.west.first[7];
 
   children = document.getElementById("west-r1-5").children;
   children[0].innerText = data.west.first[8];
-  children[0].innerText = data.west.first[9];
+  children[1].innerText = data.west.first[9];
 
   children = document.getElementById("west-r1-6").children;
   children[0].innerText = data.west.first[10];
-  children[0].innerText = data.west.first[11];
+  children[1].innerText = data.west.first[11];
 
   children = document.getElementById("west-r1-7").children;
   children[0].innerText = data.west.first[12];
-  children[0].innerText = data.west.first[13];
+  children[1].innerText = data.west.first[13];
 
   children = document.getElementById("west-r1-8").children;
   children[0].innerText = data.west.first[14];
-  children[0].innerText = data.west.first[15];
+  children[1].innerText = data.west.first[15];
 }
