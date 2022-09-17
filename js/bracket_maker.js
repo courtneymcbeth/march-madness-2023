@@ -84,6 +84,16 @@ function AddListeners() {
     });
   }
 
+  for (let i = 1; i < 5; i++) {
+    children = document.getElementById("west-r2-" + i.toString()).children;
+    children[0].addEventListener("click", function () {
+      setNextOnClick("west-r2-" + i.toString(), 0);
+    });
+    children[1].addEventListener("click", function () {
+      setNextOnClick("west-r2-" + i.toString(), 1);
+    });
+  }
+
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("east-r1-" + i.toString()).children;
     children[0].addEventListener("click", function () {
@@ -91,6 +101,16 @@ function AddListeners() {
     });
     children[1].addEventListener("click", function () {
       setNextOnClick("east-r1-" + i.toString(), 1);
+    });
+  }
+
+  for (let i = 1; i < 5; i++) {
+    children = document.getElementById("east-r2-" + i.toString()).children;
+    children[0].addEventListener("click", function () {
+      setNextOnClick("east-r2-" + i.toString(), 0);
+    });
+    children[1].addEventListener("click", function () {
+      setNextOnClick("east-r2-" + i.toString(), 1);
     });
   }
 
@@ -104,6 +124,16 @@ function AddListeners() {
     });
   }
 
+  for (let i = 1; i < 5; i++) {
+    children = document.getElementById("south-r2-" + i.toString()).children;
+    children[0].addEventListener("click", function () {
+      setNextOnClick("south-r2-" + i.toString(), 0);
+    });
+    children[1].addEventListener("click", function () {
+      setNextOnClick("south-r2-" + i.toString(), 1);
+    });
+  }
+
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("midwest-r1-" + i.toString()).children;
     children[0].addEventListener("click", function () {
@@ -111,6 +141,16 @@ function AddListeners() {
     });
     children[1].addEventListener("click", function () {
       setNextOnClick("midwest-r1-" + i.toString(), 1);
+    });
+  }
+
+  for (let i = 1; i < 5; i++) {
+    children = document.getElementById("midwest-r2-" + i.toString()).children;
+    children[0].addEventListener("click", function () {
+      setNextOnClick("midwest-r2-" + i.toString(), 0);
+    });
+    children[1].addEventListener("click", function () {
+      setNextOnClick("midwest-r2-" + i.toString(), 1);
     });
   }
 }
