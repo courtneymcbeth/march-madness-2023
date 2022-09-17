@@ -280,7 +280,7 @@ function setNextOnClick(id, pos) {
     var num = parseInt(idSplit[2]);
     var newNum = Math.ceil(num / 2);
     var newPos = (num + 1) % 2;
-    var newId = idSplit[0] + "-r4-" + newNum.toString();
+    var newId = idSplit[0] + "-r4";
     var children = document.getElementById(newId).children;
     children[newPos].innerText = document.getElementById(id).children[pos].innerText;
   } else if (idSplit[1] === "r4") {
