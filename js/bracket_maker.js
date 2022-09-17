@@ -123,6 +123,8 @@ function setNextOnClick(id, pos, text) {
   const idSplit = id.split("-");
   if (idSplit[1] === "r1") {
     var num = parseInt(idSplit[2][1]);
+    console.log(idSplit[2][1]);
+    console.log(num);
     var newNum = Math.ceil(num / 2);
     var newPos = (num + 1) % 2;
     var newId = idSplit[0] + "-r2-" + newNum.toString();
