@@ -259,6 +259,68 @@ function setNextOnClick(id, pos) {
   }
 
   // Clear the existing boxes with 
+  var clearId = id;
+  var clearPos = pos;
+  var clearIdSplit = clearId.split("-");
+  if (clearIdSplit[1] === "r1") {
+    var num = parseInt(clearIdSplit[2]);
+    var newNum = Math.ceil(num / 2);
+    clearPos = (num + 1) % 2;
+    clearId = clearIdSplit[0] + "-r2-" + newNum.toString();
+    var children = document.getElementById(clearId).children;
+    children[clearPos].innerText = "";
+    clearIdSplit = clearId.split("-");
+  }
+  if (clearIdSplit[1] === "r2") {
+    var num = parseInt(clearIdSplit[2]);
+    var newNum = Math.ceil(num / 2);
+    clearPos = (num + 1) % 2;
+    clearId = clearIdSplit[0] + "-r3-" + newNum.toString();
+    var children = document.getElementById(clearId).children;
+    children[clearPos].innerText = "";
+    clearIdSplit = clearId.split("-");
+  }
+  if (clearIdSplit[1] === "r3") {
+    var num = parseInt(clearIdSplit[2]);
+    var newNum = Math.ceil(num / 2);
+    clearPos = (num + 1) % 2;
+    clearId = clearIdSplit[0] + "-r4";
+    var children = document.getElementById(clearId).children;
+    children[clearPos].innerText = "";
+    clearIdSplit = clearId.split("-");
+  }
+  if (clearIdSplit[1] === "r4") {
+    if (clearIdSplit[0] === "west") {
+      var children = document.getElementById("f4-east-west").children;
+      children[0].innerText = "";
+      clearId = "f4-east-west";
+    } else if (clearIdSplit[0] === "east") {
+      var children = document.getElementById("f4-east-west").children;
+      children[1].innerText = "";
+      clearId = "f4-east-west";
+    } else if (clearIdSplit[0] === "south") {
+      var children = document.getElementById("f4-south-midwest").children;
+      children[0].innerText = "";
+      clearId = "f4-south-midwest";
+    } else if (clearIdSplit[0] === "midwest") {
+      var children = document.getElementById("f4-south-midwest").children;
+      children[1].innerText = "";
+      clearId = "f4-south-midwest";
+    }
+  }
+  if (clearId === "f4-east-west") {
+    var children = document.getElementById("f4-championship").children;
+    children[0].innerText = "";
+    clearId = "f4-championship";
+  }
+  if (clearId === "f4-south-midwest") {
+    var children = document.getElementById("f4-championship").children;
+    children[1].innerText = "";
+    clearId = "f4-championship";
+  }
+  if (clearId === "f4-championship") {
+    document.getElementById("f4-winner").innerText = "Winner: ";
+  }
 
   // Set the text of the next round match
   const idSplit = id.split("-");
