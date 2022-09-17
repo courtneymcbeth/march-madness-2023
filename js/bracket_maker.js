@@ -104,15 +104,13 @@ function AddListeners() {
     });
   }
 
-  for (let i = 1; i < 2; i++) {
-    children = document.getElementById("west-r4-" + i.toString()).children;
-    children[0].addEventListener("click", function () {
-      setNextOnClick("west-r4-" + i.toString(), 0);
-    });
-    children[1].addEventListener("click", function () {
-      setNextOnClick("west-r4-" + i.toString(), 1);
-    });
-  }
+  children = document.getElementById("west-r4").children;
+  children[0].addEventListener("click", function () {
+    setNextOnClick("west-r4", 0);
+  });
+  children[1].addEventListener("click", function () {
+    setNextOnClick("west-r4", 1);
+  });
 
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("east-r1-" + i.toString()).children;
@@ -144,15 +142,13 @@ function AddListeners() {
     });
   }
 
-  for (let i = 1; i < 2; i++) {
-    children = document.getElementById("east-r4-" + i.toString()).children;
-    children[0].addEventListener("click", function () {
-      setNextOnClick("east-r4-" + i.toString(), 0);
-    });
-    children[1].addEventListener("click", function () {
-      setNextOnClick("east-r4-" + i.toString(), 1);
-    });
-  }
+  children = document.getElementById("east-r4").children;
+  children[0].addEventListener("click", function () {
+    setNextOnClick("east-r4", 0);
+  });
+  children[1].addEventListener("click", function () {
+    setNextOnClick("east-r4", 1);
+  });
 
   children = document.getElementById("f4-east-west").children;
   children[0].addEventListener("click", function () {
@@ -192,15 +188,13 @@ function AddListeners() {
     });
   }
 
-  for (let i = 1; i < 2; i++) {
-    children = document.getElementById("south-r4-" + i.toString()).children;
-    children[0].addEventListener("click", function () {
-      setNextOnClick("south-r4-" + i.toString(), 0);
-    });
-    children[1].addEventListener("click", function () {
-      setNextOnClick("south-r4-" + i.toString(), 1);
-    });
-  }
+  children = document.getElementById("south-r4").children;
+  children[0].addEventListener("click", function () {
+    setNextOnClick("south-r4", 0);
+  });
+  children[1].addEventListener("click", function () {
+    setNextOnClick("south-r4", 1);
+  });
 
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("midwest-r1-" + i.toString()).children;
@@ -233,12 +227,12 @@ function AddListeners() {
   }
 
   for (let i = 1; i < 2; i++) {
-    children = document.getElementById("midwest-r4-" + i.toString()).children;
+    children = document.getElementById("midwest-r4").children;
     children[0].addEventListener("click", function () {
-      setNextOnClick("midwest-r4-" + i.toString(), 0);
+      setNextOnClick("midwest-r4", 0);
     });
     children[1].addEventListener("click", function () {
-      setNextOnClick("midwest-r4-" + i.toString(), 1);
+      setNextOnClick("midwest-r4", 1);
     });
   }
 
@@ -264,6 +258,9 @@ function setNextOnClick(id, pos) {
     return;
   }
 
+  // Clear the existing boxes with 
+
+  // Set the text of the next round match
   const idSplit = id.split("-");
   if (idSplit[1] === "r1") {
     var num = parseInt(idSplit[2]);
@@ -307,6 +304,6 @@ function setNextOnClick(id, pos) {
     var children = document.getElementById("f4-championship").children;
     children[1].innerText = document.getElementById(id).children[pos].innerText;
   } else if (id === "f4-championship") {
-    document.getElementById("f4-winner").innerText = document.getElementById(id).children[pos].innerText;
+    document.getElementById("f4-winner").innerText = "Winner: " + document.getElementById(id).children[pos].innerText;
   }
 }
