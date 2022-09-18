@@ -258,6 +258,7 @@ function AddListeners() {
 }
 
 function setNextOnClick(id, pos) {
+  console.log(document.getElementById(id).children[pos].innerText.length);
   if (document.getElementById(id).children[pos].innerText.length < 1) {
     return;
   }
