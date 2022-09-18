@@ -423,6 +423,7 @@ function checkSubmission() {
   if (numEmpty > 0) {
     document.getElementById("note").innerText = "Please fill in any blanks before submitting.";
     document.getElementById("note").style.color = "red";
+    console.log(numEmpty);
     return;
   }
 
