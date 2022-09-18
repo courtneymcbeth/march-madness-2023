@@ -263,6 +263,7 @@ function setNextOnClick(id, pos) {
   if (!(setTeam && !setTeam.trim())) {
     return;
   }
+  console.log("got past");
 
   var otherPos = 0;
   if (pos == 0) {
