@@ -258,8 +258,8 @@ function AddListeners() {
 }
 
 function setNextOnClick(id, pos) {
-  console.log(document.getElementById(id).children[pos].innerText.length);
-  if (document.getElementById(id).children[pos].innerText.length < 1) {
+  var setTeam = document.getElementById(id).children[pos].innerText;
+  if (!(setTeam && !setTeam.trim())) {
     return;
   }
 
@@ -381,53 +381,53 @@ function setNextOnClick(id, pos) {
     var newPos = (num + 1) % 2;
     var newId = idSplit[0] + "-r2-" + newNum.toString();
     var children = document.getElementById(newId).children;
-    children[newPos].innerText = document.getElementById(id).children[pos].innerText;
-    obj[idSplit[0]]["second"][newNum] = children[newPos].innerText;
+    children[newPos].innerText = setTeam;
+    obj[idSplit[0]]["second"][newNum] = setTeam;
   } else if (idSplit[1] === "r2") {
     var num = parseInt(idSplit[2]);
     var newNum = Math.ceil(num / 2);
     var newPos = (num + 1) % 2;
     var newId = idSplit[0] + "-r3-" + newNum.toString();
     var children = document.getElementById(newId).children;
-    children[newPos].innerText = document.getElementById(id).children[pos].innerText;
-    obj[idSplit[0]]["sweet16"][newNum] = children[newPos].innerText;
+    children[newPos].innerText = setTeam;
+    obj[idSplit[0]]["sweet16"][newNum] = setTeam;
   } else if (idSplit[1] === "r3") {
     var num = parseInt(idSplit[2]);
     var newNum = Math.ceil(num / 2);
     var newPos = (num + 1) % 2;
     var newId = idSplit[0] + "-r4";
     var children = document.getElementById(newId).children;
-    children[newPos].innerText = document.getElementById(id).children[pos].innerText;
-    obj[idSplit[0]]["elite8"][newNum] = children[newPos].innerText;
+    children[newPos].innerText = setTeam;
+    obj[idSplit[0]]["elite8"][newNum] = setTeam;
   } else if (idSplit[1] === "r4") {
     if (idSplit[0] === "west") {
       var children = document.getElementById("f4-east-west").children;
-      children[0].innerText = document.getElementById(id).children[pos].innerText;
-      obj["final4"]["west"] = children[0].innerText;
+      children[0].innerText = setTeam;
+      obj["final4"]["west"] = setTeam;
     } else if (idSplit[0] === "east") {
       var children = document.getElementById("f4-east-west").children;
-      children[1].innerText = document.getElementById(id).children[pos].innerText;
-      obj["final4"]["east"] = children[1].innerText;
+      children[1].innerText = setTeam;
+      obj["final4"]["east"] = setTeam;
     } else if (idSplit[0] === "south") {
       var children = document.getElementById("f4-south-midwest").children;
-      children[0].innerText = document.getElementById(id).children[pos].innerText;
-      obj["final4"]["south"] = children[0].innerText;
+      children[0].innerText = setTeam;
+      obj["final4"]["south"] = setTeam;
     } else if (idSplit[0] === "midwest") {
       var children = document.getElementById("f4-south-midwest").children;
-      children[1].innerText = document.getElementById(id).children[pos].innerText;
-      obj["final4"]["midwest"] = children[1].innerText;
+      children[1].innerText = setTeam;
+      obj["final4"]["midwest"] = setTeam;
     }
   } else if (id === "f4-east-west") {
     var children = document.getElementById("f4-championship").children;
-    children[0].innerText = document.getElementById(id).children[pos].innerText;
-    obj["championship"]["east-west"] = children[0].innerText;
+    children[0].innerText = setTeam;
+    obj["championship"]["east-west"] = setTeam;
   } else if (id === "f4-south-midwest") {
     var children = document.getElementById("f4-championship").children;
-    children[1].innerText = document.getElementById(id).children[pos].innerText;
-    obj["championship"]["south-midwest"] = children[1].innerText;
+    children[1].innerText = setTeam;
+    obj["championship"]["south-midwest"] = setTeam;
   } else if (id === "f4-championship") {
-    document.getElementById("f4-winner").innerText = "Winner: " + document.getElementById(id).children[pos].innerText;
-    obj["championship"]["winner"] = document.getElementById("f4-winner").innerText;
+    document.getElementById("f4-winner").innerText = "Winner: " + setTeam;
+    obj["championship"]["winner"] = setTeam;
   }
 }
 
