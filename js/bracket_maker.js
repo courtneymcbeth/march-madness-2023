@@ -259,6 +259,7 @@ function AddListeners() {
 
 function setNextOnClick(id, pos) {
   var setTeam = document.getElementById(id).children[pos].innerText;
+  console.log("'" + setTeam + "'");
   if (!(setTeam && !setTeam.trim())) {
     return;
   }
