@@ -259,11 +259,9 @@ function AddListeners() {
 
 function setNextOnClick(id, pos) {
   var setTeam = document.getElementById(id).children[pos].innerText;
-  console.log("'" + setTeam + "'");
   if (setTeam.length < 1 || setTeam.trim().length < 1) {
     return;
   }
-  console.log("got past");
 
   var otherPos = 0;
   if (pos == 0) {
