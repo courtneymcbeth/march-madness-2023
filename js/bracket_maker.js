@@ -269,6 +269,8 @@ function setNextOnClick(id, pos) {
   }
 
   if (otherTeam.length > 0) {
+    console.log("other team: " + otherTeam);
+    console.log(otherTeam);
     // Clear the existing boxes with 
     var clearId = id;
     var clearPos = pos;
