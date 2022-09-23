@@ -267,7 +267,7 @@ function setNextOnClick(id, pos) {
   if (pos == 0) {
     otherPos = 1;
   }
-  var otherTeam = document.getElementById(id).children[otherPos].innerText;
+
   if (otherTeam.length > 0) {
     // Clear the existing boxes with 
     var clearId = id;
@@ -279,7 +279,7 @@ function setNextOnClick(id, pos) {
       clearPos = (num + 1) % 2;
       clearId = clearIdSplit[0] + "-r2-" + newNum.toString();
       var children = document.getElementById(clearId).children;
-      if (children[clearPos].innerText === otherTeam) {
+      if (children[clearPos].innerText === otherTeam && otherTeam.trim().length > 0) {
         console.log("cleared" + children[clearPos].innerText)
         children[clearPos].innerText = "";
         clearIdSplit = clearId.split("-");
@@ -292,7 +292,7 @@ function setNextOnClick(id, pos) {
       clearPos = (num + 1) % 2;
       clearId = clearIdSplit[0] + "-r3-" + newNum.toString();
       var children = document.getElementById(clearId).children;
-      if (children[clearPos].innerText === otherTeam) {
+      if (children[clearPos].innerText === otherTeam && otherTeam.trim().length > 0) {
         console.log("cleared" + children[clearPos].innerText)
         children[clearPos].innerText = "";
         clearIdSplit = clearId.split("-");
@@ -305,7 +305,7 @@ function setNextOnClick(id, pos) {
       clearPos = (num + 1) % 2;
       clearId = clearIdSplit[0] + "-r4";
       var children = document.getElementById(clearId).children;
-      if (children[clearPos].innerText === otherTeam) {
+      if (children[clearPos].innerText === otherTeam && otherTeam.trim().length > 0) {
         console.log("cleared" + children[clearPos].innerText)
         children[clearPos].innerText = "";
         clearIdSplit = clearId.split("-");
@@ -315,7 +315,7 @@ function setNextOnClick(id, pos) {
     if (clearIdSplit[1] === "r4") {
       if (clearIdSplit[0] === "west") {
         var children = document.getElementById("f4-east-west").children;
-        if (children[0].innerText === otherTeam) {
+        if (children[0].innerText === otherTeam && otherTeam.trim().length > 0) {
           console.log("cleared" + children[0].innerText)
           children[0].innerText = "";
           clearId = "f4-east-west";
@@ -323,7 +323,7 @@ function setNextOnClick(id, pos) {
         }
       } else if (clearIdSplit[0] === "east") {
         var children = document.getElementById("f4-east-west").children;
-        if (children[1].innerText === otherTeam) {
+        if (children[1].innerText === otherTeam && otherTeam.trim().length > 0) {
           console.log("cleared" + children[1].innerText)
           children[1].innerText = "";
           clearId = "f4-east-west";
@@ -331,7 +331,7 @@ function setNextOnClick(id, pos) {
         }
       } else if (clearIdSplit[0] === "south") {
         var children = document.getElementById("f4-south-midwest").children;
-        if (children[0].innerText === otherTeam) {
+        if (children[0].innerText === otherTeam && otherTeam.trim().length > 0) {
           console.log("cleared" + children[0].innerText)
           children[0].innerText = "";
           clearId = "f4-south-midwest";
@@ -339,7 +339,7 @@ function setNextOnClick(id, pos) {
         }
       } else if (clearIdSplit[0] === "midwest") {
         var children = document.getElementById("f4-south-midwest").children;
-        if (children[1].innerText === otherTeam) {
+        if (children[1].innerText === otherTeam && otherTeam.trim().length > 0) {
           console.log("cleared" + children[1].innerText)
           children[1].innerText = "";
           clearId = "f4-south-midwest";
@@ -349,7 +349,7 @@ function setNextOnClick(id, pos) {
     }
     if (clearId === "f4-east-west") {
       var children = document.getElementById("f4-championship").children;
-      if (children[0].innerText === otherTeam) {
+      if (children[0].innerText === otherTeam && otherTeam.trim().length > 0) {
         console.log("cleared" + children[0].innerText)
         children[0].innerText = "";
         clearId = "f4-championship";
@@ -357,19 +357,20 @@ function setNextOnClick(id, pos) {
       }
     } else if (clearId === "f4-south-midwest") {
       var children = document.getElementById("f4-championship").children;
-      if (children[1].innerText === otherTeam) {
+      if (children[1].innerText === otherTeam && otherTeam.trim().length > 0) {
         console.log("cleared" + children[1].innerText)
         children[1].innerText = "";
         clearId = "f4-championship";
         numEmpty = numEmpty + 1;
       }
     }
-    if (clearId === "f4-championship" &&
-      document.getElementById("f4-winner").innerText.includes(otherTeam)) {
-      document.getElementById("f4-winner").innerText = "Winner: ";
-      console.log("cleared" + document.getElementById("f4-winner").innerText)
-      numEmpty = numEmpty + 1;
-    }
+  }
+  if (clearId === "f4-championship" &&
+    document.getElementById("f4-winner").innerText.trim().length > 7 &&
+    document.getElementById("f4-winner").innerText.split(" ")[1] !== setTeam) {
+    document.getElementById("f4-winner").innerText = "Winner: ";
+    console.log("cleared" + document.getElementById("f4-winner").innerText)
+    numEmpty = numEmpty + 1;
   }
 
   // Set the text of the next round match
