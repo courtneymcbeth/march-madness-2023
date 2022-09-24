@@ -35,7 +35,7 @@ function displayBracks(bracks) {
 
     brack_list.innerHTML += '<a href="https://courtneymcbeth.github.io/march-madness-2023/bracket?number=' + b.number.toString() + '">';
     brack_list.innerHTML += '<div class="brack_over">';
-    brack_list.innerHTML += '<img src="' + b.img + '"/>';
+    brack_list.innerHTML += '<img src="' + b.imgurl + '"/>';
     brack_list.innerHTML += '<div class="brack_over_data">';
     brack_list.innerHTML += '<div class="brack_over_data_top">';
     brack_list.innerHTML += '<h2>' + b.name + '</h2>';
