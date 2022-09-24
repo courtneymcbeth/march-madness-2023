@@ -167,15 +167,15 @@ function setTeams(data) {
     idx = idx + 2;
   }
 
-  children = document.getElementById("f4-east-west" + i.toString()).children;
+  children = document.getElementById("f4-east-west").children;
   children[0].innerText = data.final4.west;
   children[1].innerText = data.final4.east;
 
-  children = document.getElementById("f4-south-midwest" + i.toString()).children;
+  children = document.getElementById("f4-south-midwest").children;
   children[0].innerText = data.final4.south;
   children[1].innerText = data.final4.midwest;
 
-  children = document.getElementById("f4-championship" + i.toString()).children;
+  children = document.getElementById("f4-championship").children;
   children[0].innerText = data["championship"]["east-west"];
   children[1].innerText = data["championship"]["south-midwest"];
 
