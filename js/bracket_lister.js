@@ -14,7 +14,7 @@ function listBrackets() {
 
       let i;
       for (i = 0; i < ret_data.length; i++) {
-        brack_list.innerHTML += '<a href="https://courtneymcbeth.github.io/march-madness-2023/bracket?number="' + ret_data[i].number + '><h2>' + ret_data[i].user.login + '</h2></a>';
+        brack_list.innerHTML += '<a href="https://courtneymcbeth.github.io/march-madness-2023/bracket?number="' + ret_data[i].number.toString() + '"><h2>' + ret_data[i].user.login + '</h2></a>';
       }
     }
   };
