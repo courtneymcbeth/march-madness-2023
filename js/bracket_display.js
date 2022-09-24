@@ -63,37 +63,37 @@ function calcScore(brack) {
   var regions = ["west", "east", "south", "midwest"];
   for (let i = 0; i < regions.length; i++) {
     for (let j = 0; j < brack[regions[i]]["second"].length; j++) {
-      if (brack[regions[i]]["second"][j] === gold[regions[i]]["second"][j]) {
+      if (brack[regions[i]]["second"][j].toUpperCase() === gold[regions[i]]["second"][j].toUpperCase()) {
         score = score + 1;
       }
     }
 
     for (let j = 0; j < brack[regions[i]]["sweet16"].length; j++) {
-      if (brack[regions[i]]["sweet16"][j] === gold[regions[i]]["sweet16"][j]) {
+      if (brack[regions[i]]["sweet16"][j].toUpperCase() === gold[regions[i]]["sweet16"][j].toUpperCase()) {
         score = score + 2;
       }
     }
 
     for (let j = 0; j < brack[regions[i]]["elite8"].length; j++) {
-      if (brack[regions[i]]["elite8"][j] === gold[regions[i]]["elite8"][j]) {
+      if (brack[regions[i]]["elite8"][j].toUpperCase() === gold[regions[i]]["elite8"][j].toUpperCase()) {
         score = score + 4;
       }
     }
 
-    if (brack["final4"][regions[i]] === gold["final4"][regions[i]]) {
+    if (brack["final4"][regions[i]].toUpperCase() === gold["final4"][regions[i]].toUpperCase()) {
       score = score + 8;
     }
   }
 
-  if (brack["championship"]["east-west"] === gold["championship"]["east-west"]) {
+  if (brack["championship"]["east-west"].toUpperCase() === gold["championship"]["east-west"].toUpperCase()) {
     score = score + 16;
   }
 
-  if (brack["championship"]["south-midwest"] === gold["championship"]["south-midwest"]) {
+  if (brack["championship"]["south-midwest"].toUpperCase() === gold["championship"]["south-midwest"].toUpperCase()) {
     score = score + 16;
   }
 
-  if (brack["championship"]["winner"] === gold["championship"]["winner"]) {
+  if (brack["championship"]["winner"].toUpperCase() === gold["championship"]["winner"].toUpperCase()) {
     score = score + 32;
   }
 
@@ -110,22 +110,7 @@ function setTeams(data) {
     for (let i = 1; i < 9; i++) {
       children = document.getElementById(regions[j] + "-r1-" + i.toString()).children;
       children[0].innerText = data[regions[j]]["first"][idx];
-      if (gold[regions[j]]["first"][idx].trim().length > 0) {
-        if (data[regions[j]]["first"][idx].toUpperCase() === gold[regions[j]]["first"][idx].toUpperCase()) {
-          children[0].classList.add("correct");
-        } else {
-          children[0].classList.add("wrong");
-        }
-      }
-
       children[1].innerText = data[regions[j]]["first"][idx + 1];
-      if (gold[regions[j]]["first"][idx + 1].trim().length > 0) {
-        if (data[regions[j]]["first"][idx + 1].toUpperCase() === gold[regions[j]]["first"][idx + 1].toUpperCase()) {
-          children[1].classList.add("correct");
-        } else {
-          children[1].classList.add("wrong");
-        }
-      }
       idx = idx + 2;
     }
 
@@ -137,8 +122,10 @@ function setTeams(data) {
       if (gold[regions[j]]["second"][idx].trim().length > 0) {
         if (data[regions[j]]["second"][idx].toUpperCase() === gold[regions[j]]["second"][idx].toUpperCase()) {
           children[0].classList.add("correct");
+          children[0].innerHTML += '<span class="score">1</span>';
         } else {
           children[0].classList.add("wrong");
+          children[0].innerHTML += '<span class="score">0</span>';
         }
       }
 
@@ -146,8 +133,10 @@ function setTeams(data) {
       if (gold[regions[j]]["second"][idx + 1].trim().length > 0) {
         if (data[regions[j]]["second"][idx + 1].toUpperCase() === gold[regions[j]]["second"][idx + 1].toUpperCase()) {
           children[1].classList.add("correct");
+          children[1].innerHTML += '<span class="score">1</span>';
         } else {
           children[1].classList.add("wrong");
+          children[1].innerHTML += '<span class="score">0</span>';
         }
       }
       idx = idx + 2;
@@ -161,8 +150,10 @@ function setTeams(data) {
       if (gold[regions[j]]["sweet16"][idx].trim().length > 0) {
         if (data[regions[j]]["sweet16"][idx].toUpperCase() === gold[regions[j]]["sweet16"][idx].toUpperCase()) {
           children[0].classList.add("correct");
+          children[0].innerHTML += '<span class="score">2</span>';
         } else {
           children[0].classList.add("wrong");
+          children[0].innerHTML += '<span class="score">0</span>';
         }
       }
 
@@ -170,8 +161,10 @@ function setTeams(data) {
       if (gold[regions[j]]["sweet16"][idx + 1].trim().length > 0) {
         if (data[regions[j]]["sweet16"][idx + 1].toUpperCase() === gold[regions[j]]["sweet16"][idx + 1].toUpperCase()) {
           children[1].classList.add("correct");
+          children[1].innerHTML += '<span class="score">2</span>';
         } else {
           children[1].classList.add("wrong");
+          children[1].innerHTML += '<span class="score">0</span>';
         }
       }
       idx = idx + 2;
@@ -185,8 +178,10 @@ function setTeams(data) {
       if (gold[regions[j]]["elite8"][idx].trim().length > 0) {
         if (data[regions[j]]["elite8"][idx].toUpperCase() === gold[regions[j]]["elite8"][idx].toUpperCase()) {
           children[0].classList.add("correct");
+          children[0].innerHTML += '<span class="score">4</span>';
         } else {
           children[0].classList.add("wrong");
+          children[0].innerHTML += '<span class="score">0</span>';
         }
       }
 
@@ -194,8 +189,10 @@ function setTeams(data) {
       if (gold[regions[j]]["elite8"][idx + 1].trim().length > 0) {
         if (data[regions[j]]["elite8"][idx + 1].toUpperCase() === gold[regions[j]]["elite8"][idx + 1].toUpperCase()) {
           children[1].classList.add("correct");
+          children[1].innerHTML += '<span class="score">4</span>';
         } else {
           children[1].classList.add("wrong");
+          children[1].innerHTML += '<span class="score">0</span>';
         }
       }
       idx = idx + 2;
@@ -207,8 +204,10 @@ function setTeams(data) {
   if (gold["final4"]["west"].trim().length > 0) {
     if (data["final4"]["west"].toUpperCase() === gold["final4"]["west"].toUpperCase()) {
       children[0].classList.add("correct");
+      children[0].innerHTML += '<span class="score">8</span>';
     } else {
       children[0].classList.add("wrong");
+      children[0].innerHTML += '<span class="score">0</span>';
     }
   }
 
@@ -216,8 +215,10 @@ function setTeams(data) {
   if (gold["final4"]["east"].trim().length > 0) {
     if (data["final4"]["east"].toUpperCase() === gold["final4"]["east"].toUpperCase()) {
       children[1].classList.add("correct");
+      children[1].innerHTML += '<span class="score">8</span>';
     } else {
       children[1].classList.add("wrong");
+      children[1].innerHTML += '<span class="score">0</span>';
     }
   }
 
@@ -226,8 +227,10 @@ function setTeams(data) {
   if (gold["final4"]["south"].trim().length > 0) {
     if (data["final4"]["south"].toUpperCase() === gold["final4"]["south"].toUpperCase()) {
       children[0].classList.add("correct");
+      children[0].innerHTML += '<span class="score">8</span>';
     } else {
       children[0].classList.add("wrong");
+      children[0].innerHTML += '<span class="score">0</span>';
     }
   }
 
@@ -235,8 +238,10 @@ function setTeams(data) {
   if (gold["final4"]["midwest"].trim().length > 0) {
     if (data["final4"]["midwest"].toUpperCase() === gold["final4"]["midwest"].toUpperCase()) {
       children[1].classList.add("correct");
+      children[1].innerHTML += '<span class="score">8</span>';
     } else {
       children[1].classList.add("wrong");
+      children[1].innerHTML += '<span class="score">0</span>';
     }
   }
 
@@ -245,8 +250,10 @@ function setTeams(data) {
   if (gold["championship"]["east-west"].trim().length > 0) {
     if (data["championship"]["east-west"].toUpperCase() === gold["championship"]["east-west"].toUpperCase()) {
       children[0].classList.add("correct");
+      children[0].innerHTML += '<span class="score">16</span>';
     } else {
       children[0].classList.add("wrong");
+      children[0].innerHTML += '<span class="score">0</span>';
     }
   }
 
@@ -254,8 +261,10 @@ function setTeams(data) {
   if (gold["championship"]["south-midwest"].trim().length > 0) {
     if (data["championship"]["south-midwest"].toUpperCase() === gold["championship"]["south-midwest"].toUpperCase()) {
       children[1].classList.add("correct");
+      children[1].innerHTML += '<span class="score">16</span>';
     } else {
       children[1].classList.add("wrong");
+      children[1].innerHTML += '<span class="score">0</span>';
     }
   }
 
@@ -263,8 +272,10 @@ function setTeams(data) {
   if (gold["championship"]["winner"].trim().length > 0) {
     if (data["championship"]["winner"].toUpperCase() === gold["championship"]["winner"].toUpperCase()) {
       document.getElementById("f4-winner").classList.add("correct");
+      document.getElementById("f4-winner").innerText += '- 32';
     } else {
       document.getElementById("f4-winner").classList.add("wrong");
+      document.getElementById("f4-winner").innerText += '- 0';
     }
   }
 }
