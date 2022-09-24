@@ -32,17 +32,18 @@ function displayBracks(bracks) {
 
   for (let i = 0; i < bracks.length; i++) {
     var b = bracks[i];
+    var brackHTML = '<a href="https://courtneymcbeth.github.io/march-madness-2023/bracket?number=' + b.number.toString() + '">';
+    brackHTML += '<div class="brack_over">';
+    brackHTML += '<img src="' + b.imgurl + '"/>';
+    brackHTML += '<div class="brack_over_data">';
+    brackHTML += '<div class="brack_over_data_top">';
+    brackHTML += '<h2>' + b.name + '</h2>';
+    brackHTML += '<h2>#' + (i + 1).toString() + '</h2>';
+    brackHTML += '</div><div class="brack_over_data_bot">';
+    brackHTML += '<h3>Score: ' + b.score.toString() + '</h3>';
+    brackHTML += '</div></div></div></a>';
 
-    brack_list.innerHTML += '<a href="https://courtneymcbeth.github.io/march-madness-2023/bracket?number=' + b.number.toString() + '">';
-    brack_list.innerHTML += '<div class="brack_over">';
-    brack_list.innerHTML += '<img src="' + b.imgurl + '"/>';
-    brack_list.innerHTML += '<div class="brack_over_data">';
-    brack_list.innerHTML += '<div class="brack_over_data_top">';
-    brack_list.innerHTML += '<h2>' + b.name + '</h2>';
-    brack_list.innerHTML += '<h2>#' + (i + 1).toString() + '</h2>';
-    brack_list.innerHTML += '</div><div class="brack_over_data_bot">';
-    brack_list.innerHTML += '<h3>Score: ' + b.score.toString() + '</h3>';
-    brack_list.innerHTML += '</div></div></div></a>';
+    brack_list.innerHTML += brackHTML;
   }
   return;
 }
