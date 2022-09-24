@@ -76,37 +76,37 @@ function calcScore(brack) {
   var regions = ["west", "east", "south", "midwest"];
   for (let i = 0; i < regions.length; i++) {
     for (let j = 0; j < brack[regions[i]]["second"].length; j++) {
-      if (brack[regions[i]]["second"][j] === gold[regions[i]]["second"][j]) {
+      if (brack[regions[i]]["second"][j].toUpperCase() === gold[regions[i]]["second"][j].toUpperCase()) {
         score = score + 1;
       }
     }
 
     for (let j = 0; j < brack[regions[i]]["sweet16"].length; j++) {
-      if (brack[regions[i]]["sweet16"][j] === gold[regions[i]]["sweet16"][j]) {
+      if (brack[regions[i]]["sweet16"][j].toUpperCase() === gold[regions[i]]["sweet16"][j].toUpperCase()) {
         score = score + 2;
       }
     }
 
     for (let j = 0; j < brack[regions[i]]["elite8"].length; j++) {
-      if (brack[regions[i]]["elite8"][j] === gold[regions[i]]["elite8"][j]) {
+      if (brack[regions[i]]["elite8"][j].toUpperCase() === gold[regions[i]]["elite8"][j].toUpperCase()) {
         score = score + 4;
       }
     }
 
-    if (brack["final4"][regions[i]] === gold["final4"][regions[i]]) {
+    if (brack["final4"][regions[i]].toUpperCase() === gold["final4"][regions[i]].toUpperCase()) {
       score = score + 8;
     }
   }
 
-  if (brack["championship"]["east-west"] === gold["championship"]["east-west"]) {
+  if (brack["championship"]["east-west"].toUpperCase() === gold["championship"]["east-west"].toUpperCase()) {
     score = score + 16;
   }
 
-  if (brack["championship"]["south-midwest"] === gold["championship"]["south-midwest"]) {
+  if (brack["championship"]["south-midwest"].toUpperCase() === gold["championship"]["south-midwest"].toUpperCase()) {
     score = score + 16;
   }
 
-  if (brack["championship"]["winner"] === gold["championship"]["winner"]) {
+  if (brack["championship"]["winner"].toUpperCase() === gold["championship"]["winner"].toUpperCase()) {
     score = score + 32;
   }
 
