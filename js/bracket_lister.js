@@ -3,7 +3,7 @@ function listBrackets() {
   var get_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues';
   get_url += '?state=all';
   xhr.open('GET', get_url, true);
-  xhr.setRequestHeader('Authorization', 'token ' + getQueryVariable('auth'));
+  // xhr.setRequestHeader('Authorization', 'token ' + getQueryVariable('auth'));
 
   xhr.onload = function () {
     var ret_data = JSON.parse(this.responseText);
