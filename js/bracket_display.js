@@ -45,7 +45,7 @@ async function loadBracket() {
 
     var score = calcScore(JSON.parse(ret_data.body));
     var infoHTML = '<img src="' + ret_data["user"]["avatar_url"] + '" height="40px" width="40px" />';
-    infoHTML += '<h5>' + ret_data.user.login + ' - Score: ' + score.toString() + '</h5>';
+    infoHTML += '<h5>' + ret_data.title + ' - Score: ' + score.toString() + '</h5>';
     document.getElementById("info_bar").innerHTML += infoHTML;
 
     setTeams(JSON.parse(ret_data.body));

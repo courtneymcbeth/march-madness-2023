@@ -459,11 +459,16 @@ function checkSubmission() {
     return;
   }
 
+  if (document.getElementById('fname').value.trim().length < 1 || document.getElementById('lname').value.trim().length) {
+    document.getElementById("note").innerText = "Please fill in your first and last name.";
+    document.getElementById("note").style.color = "red";
+  }
+
   var auth_code = getQueryVariable('auth');
   var post_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues';
 
   var req = new Object();
-  req.title = "Bracket";
+  req.title = document.getElementById('fname').value.trim() + " " + document.getElementById('lname').value.trim();
   req.body = JSON.stringify(obj);
 
   var jsonString = JSON.stringify(req);

@@ -64,7 +64,7 @@ function brackToObj(data) {
   obj = {};
 
   obj["imgurl"] = data["user"]["avatar_url"];
-  obj["name"] = data["user"]["login"];
+  obj["name"] = data["title"];
   obj["number"] = data["number"];
   obj["score"] = calcScore(JSON.parse(data.body));
   return obj;
