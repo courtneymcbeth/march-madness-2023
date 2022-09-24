@@ -65,7 +65,7 @@ function setTeams(data) {
 
   var idx = 0;
   for (let i = 1; i < 2; i++) {
-    children = document.getElementById("west-r4-" + i.toString()).children;
+    children = document.getElementById("west-r4").children;
     children[0].innerText = data.west.elite8[idx];
     children[1].innerText = data.west.elite8[idx + 1];
     idx = idx + 2;
@@ -97,7 +97,7 @@ function setTeams(data) {
 
   idx = 0;
   for (let i = 1; i < 2; i++) {
-    children = document.getElementById("east-r4-" + i.toString()).children;
+    children = document.getElementById("east-r4").children;
     children[0].innerText = data.east.elite8[idx];
     children[1].innerText = data.east.elite8[idx + 1];
     idx = idx + 2;
@@ -129,7 +129,7 @@ function setTeams(data) {
 
   idx = 0;
   for (let i = 1; i < 2; i++) {
-    children = document.getElementById("south-r4-" + i.toString()).children;
+    children = document.getElementById("south-r4").children;
     children[0].innerText = data.south.elite8[idx];
     children[1].innerText = data.south.elite8[idx + 1];
     idx = idx + 2;
@@ -161,7 +161,7 @@ function setTeams(data) {
 
   idx = 0;
   for (let i = 1; i < 2; i++) {
-    children = document.getElementById("midwest-r4-" + i.toString()).children;
+    children = document.getElementById("midwest-r4").children;
     children[0].innerText = data.midwest.elite8[idx];
     children[1].innerText = data.midwest.elite8[idx + 1];
     idx = idx + 2;
