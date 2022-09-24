@@ -43,7 +43,10 @@ async function loadBracket() {
     var ret_data = JSON.parse(this.responseText);
     console.log(ret_data.body);
 
-    document.getElementById("brack_label").innerText = "Bracket: " + ret_data.user.login;
+    var score = calcScore(JSON.parse(ret_data.body));
+    var infoHTML = '<img src="' + ret_data["user"]["avatar_url"] + '" height="40px" width="40px" />';
+    infoHTML += '<h5>' + ret_data.user.login + ' - Score: ' + score.toString() + '</h5>';
+    document.getElementById("info_bar").innerHTML += infoHTML;
 
     setTeams(JSON.parse(ret_data.body));
   };
@@ -52,6 +55,49 @@ async function loadBracket() {
     gold = JSON.parse(text);
   });
   xhr.send();
+}
+
+function calcScore(brack) {
+  var score = 0;
+
+  var regions = ["west", "east", "south", "midwest"];
+  for (let i = 0; i < regions.length; i++) {
+    for (let j = 0; j < brack[regions[i]]["second"].length; j++) {
+      if (brack[regions[i]]["second"][j] === gold[regions[i]]["second"][j]) {
+        score = score + 1;
+      }
+    }
+
+    for (let j = 0; j < brack[regions[i]]["sweet16"].length; j++) {
+      if (brack[regions[i]]["sweet16"][j] === gold[regions[i]]["sweet16"][j]) {
+        score = score + 2;
+      }
+    }
+
+    for (let j = 0; j < brack[regions[i]]["elite8"].length; j++) {
+      if (brack[regions[i]]["elite8"][j] === gold[regions[i]]["elite8"][j]) {
+        score = score + 4;
+      }
+    }
+
+    if (brack["final4"][regions[i]] === gold["final4"][regions[i]]) {
+      score = score + 8;
+    }
+  }
+
+  if (brack["championship"]["east-west"] === gold["championship"]["east-west"]) {
+    score = score + 16;
+  }
+
+  if (brack["championship"]["south-midwest"] === gold["championship"]["south-midwest"]) {
+    score = score + 16;
+  }
+
+  if (brack["championship"]["winner"] === gold["championship"]["winner"]) {
+    score = score + 32;
+  }
+
+  return score;
 }
 
 function setTeams(data) {
