@@ -272,10 +272,10 @@ function setTeams(data) {
   if (gold["championship"]["winner"].trim().length > 0) {
     if (data["championship"]["winner"].toUpperCase() === gold["championship"]["winner"].toUpperCase()) {
       document.getElementById("f4-winner").classList.add("correct");
-      document.getElementById("f4-winner").innerText += '- 32';
+      document.getElementById("f4-winner").innerText += ' - 32';
     } else {
       document.getElementById("f4-winner").classList.add("wrong");
-      document.getElementById("f4-winner").innerText += '- 0';
+      document.getElementById("f4-winner").innerText += ' - 0';
     }
   }
 }
