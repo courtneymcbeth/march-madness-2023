@@ -29,6 +29,8 @@ function loadBracket() {
     var ret_data = JSON.parse(this.responseText);
     console.log(ret_data.body);
 
+    document.getElementById("brack_label").innerText = "Bracket: " + ret_data.user.login;
+
     setTeams(JSON.parse(ret_data.body));
   };
   xhr.send();
