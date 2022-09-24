@@ -19,24 +19,24 @@
       "Cal St. Fullerton"
     ],
     "second": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "Gonzaga",
+      "Memphis",
+      "UConn",
+      "Vermont",
+      "Notre Dame",
+      "Texas Tech",
+      "Michigan St.",
+      "Duke"
     ],
     "sweet16": [
-      "",
-      "",
-      "",
-      ""
+      "Gonzaga",
+      "UConn",
+      "Notre Dame",
+      "Duke"
     ],
     "elite8": [
-      "",
-      ""
+      "Gonzaga",
+      "Duke"
     ]
   },
   "east": {
@@ -59,24 +59,24 @@
       "Saint Peter's"
     ],
     "second": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "Baylor",
+      "Marquette",
+      "Indiana",
+      "UCLA",
+      "Texas",
+      "Yale",
+      "San Fransisco",
+      "Kentucky"
     ],
     "sweet16": [
-      "",
-      "",
-      "",
-      ""
+      "Baylor",
+      "Indiana",
+      "Yale",
+      "Kentucky"
     ],
     "elite8": [
-      "",
-      ""
+      "Indiana",
+      "Kentucky"
     ]
   },
   "south": {
@@ -99,24 +99,24 @@
       "Delaware"
     ],
     "second": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "Arizona",
+      "TCU",
+      "Houston",
+      "Illinois",
+      "Michigan",
+      "Longwood",
+      "Loyola Chicago",
+      "Villanova"
     ],
     "sweet16": [
-      "",
-      "",
-      "",
-      ""
+      "Arizona",
+      "Illinois",
+      "Michigan",
+      "Villanova"
     ],
     "elite8": [
-      "",
-      ""
+      "Arizona",
+      "Villanova"
     ]
   },
   "midwest": {
@@ -139,35 +139,35 @@
       "Jacksonville St."
     ],
     "second": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
+      "Kansas",
+      "Creighton",
+      "Richmond",
+      "Providence",
+      "LSU",
+      "Colgate",
+      "Miami",
+      "Auburn"
     ],
     "sweet16": [
-      "",
-      "",
-      "",
-      ""
+      "Kansas",
+      "Providence",
+      "Colgate",
+      "Miami"
     ],
     "elite8": [
-      "",
-      ""
+      "Kansas",
+      "Colgate"
     ]
   },
   "final4": {
-    "east": "",
-    "west": "",
-    "south": "",
-    "midwest": ""
+    "east": "Indiana",
+    "west": "Gonzaga",
+    "south": "Villanova",
+    "midwest": "Colgate"
   },
   "championship": {
-    "east-west": "",
-    "south-midwest": "",
-    "winner": ""
+    "east-west": "Gonzaga",
+    "south-midwest": "Villanova",
+    "winner": "Gonzaga"
   }
 }
