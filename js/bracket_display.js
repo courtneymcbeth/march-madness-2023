@@ -29,7 +29,7 @@ function loadBracket() {
     var ret_data = JSON.parse(this.responseText);
     console.log(ret_data.body);
 
-    setTeams(ret_data.body);
+    setTeams(JSON.parse(ret_data.body));
   };
   xhr.send();
 }
