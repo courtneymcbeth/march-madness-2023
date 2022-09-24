@@ -63,18 +63,18 @@ function setTeams(data) {
     var idx = 0;
     for (let i = 1; i < 9; i++) {
       children = document.getElementById(regions[j] + "-r1-" + i.toString()).children;
-      children[0].innerText = data[region[j]]["first"][idx];
-      if (gold[region[j]]["first"][idx].trim().length > 0) {
-        if (data[region[j]]["first"][idx] === gold[region[j]]["first"][idx]) {
+      children[0].innerText = data[regions[j]]["first"][idx];
+      if (gold[regions[j]]["first"][idx].trim().length > 0) {
+        if (data[regions[j]]["first"][idx] === gold[regions[j]]["first"][idx]) {
           children[0].classList.add("correct");
         } else {
           children[0].classList.add("wrong");
         }
       }
 
-      children[1].innerText = data[region[j]]["first"][idx + 1];
-      if (gold[region[j]]["first"][idx + 1].trim().length > 0) {
-        if (data[region[j]]["first"][idx + 1] === gold[region[j]]["first"][idx + 1]) {
+      children[1].innerText = data[regions[j]]["first"][idx + 1];
+      if (gold[regions[j]]["first"][idx + 1].trim().length > 0) {
+        if (data[regions[j]]["first"][idx + 1] === gold[regions[j]]["first"][idx + 1]) {
           children[1].classList.add("correct");
         } else {
           children[1].classList.add("wrong");
@@ -87,18 +87,18 @@ function setTeams(data) {
     var idx = 0;
     for (let i = 1; i < 5; i++) {
       children = document.getElementById(regions[j] + "-r2-" + i.toString()).children;
-      children[0].innerText = data[region[j]]["second"][idx];
-      if (gold[region[j]]["second"][idx].trim().length > 0) {
-        if (data[region[j]]["second"][idx] === gold[region[j]]["second"][idx]) {
+      children[0].innerText = data[regions[j]]["second"][idx];
+      if (gold[regions[j]]["second"][idx].trim().length > 0) {
+        if (data[regions[j]]["second"][idx] === gold[regions[j]]["second"][idx]) {
           children[0].classList.add("correct");
         } else {
           children[0].classList.add("wrong");
         }
       }
 
-      children[1].innerText = data[region[j]]["second"][idx + 1];
-      if (gold[region[j]]["second"][idx + 1].trim().length > 0) {
-        if (data[region[j]]["second"][idx + 1] === gold[region[j]]["second"][idx + 1]) {
+      children[1].innerText = data[regions[j]]["second"][idx + 1];
+      if (gold[regions[j]]["second"][idx + 1].trim().length > 0) {
+        if (data[regions[j]]["second"][idx + 1] === gold[regions[j]]["second"][idx + 1]) {
           children[1].classList.add("correct");
         } else {
           children[1].classList.add("wrong");
@@ -111,18 +111,18 @@ function setTeams(data) {
     var idx = 0;
     for (let i = 1; i < 3; i++) {
       children = document.getElementById(regions[j] + "-r3-" + i.toString()).children;
-      children[0].innerText = data[region[j]]["sweet16"][idx];
-      if (gold[region[j]]["sweet16"][idx].trim().length > 0) {
-        if (data[region[j]]["sweet16"][idx] === gold[region[j]]["sweet16"][idx]) {
+      children[0].innerText = data[regions[j]]["sweet16"][idx];
+      if (gold[regions[j]]["sweet16"][idx].trim().length > 0) {
+        if (data[regions[j]]["sweet16"][idx] === gold[regions[j]]["sweet16"][idx]) {
           children[0].classList.add("correct");
         } else {
           children[0].classList.add("wrong");
         }
       }
 
-      children[1].innerText = data[region[j]]["sweet16"][idx + 1];
-      if (gold[region[j]]["sweet16"][idx + 1].trim().length > 0) {
-        if (data[region[j]]["sweet16"][idx + 1] === gold[region[j]]["sweet16"][idx + 1]) {
+      children[1].innerText = data[regions[j]]["sweet16"][idx + 1];
+      if (gold[regions[j]]["sweet16"][idx + 1].trim().length > 0) {
+        if (data[regions[j]]["sweet16"][idx + 1] === gold[regions[j]]["sweet16"][idx + 1]) {
           children[1].classList.add("correct");
         } else {
           children[1].classList.add("wrong");
@@ -135,18 +135,18 @@ function setTeams(data) {
     var idx = 0;
     for (let i = 1; i < 2; i++) {
       children = document.getElementById(regions[j] + "-r4").children;
-      children[0].innerText = data[region[j]]["elite8"][idx];
-      if (gold[region[j]]["elite8"][idx].trim().length > 0) {
-        if (data[region[j]]["elite8"][idx] === gold[region[j]]["elite8"][idx]) {
+      children[0].innerText = data[regions[j]]["elite8"][idx];
+      if (gold[regions[j]]["elite8"][idx].trim().length > 0) {
+        if (data[regions[j]]["elite8"][idx] === gold[regions[j]]["elite8"][idx]) {
           children[0].classList.add("correct");
         } else {
           children[0].classList.add("wrong");
         }
       }
 
-      children[1].innerText = data[region[j]]["elite8"][idx + 1];
-      if (gold[region[j]]["elite8"][idx + 1].trim().length > 0) {
-        if (data[region[j]]["elite8"][idx + 1] === gold[region[j]]["elite8"][idx + 1]) {
+      children[1].innerText = data[regions[j]]["elite8"][idx + 1];
+      if (gold[regions[j]]["elite8"][idx + 1].trim().length > 0) {
+        if (data[regions[j]]["elite8"][idx + 1] === gold[regions[j]]["elite8"][idx + 1]) {
           children[1].classList.add("correct");
         } else {
           children[1].classList.add("wrong");
