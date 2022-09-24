@@ -16,6 +16,7 @@ async function listBrackets() {
       for (let i = 0; i < ret_data.length; i++) {
         bracks.push(brackToObj(ret_data[i]));
       }
+      bracks.sort((a, b) => b.score - a.score);
       displayBracks(bracks);
     }
   };
@@ -34,11 +35,11 @@ function displayBracks(bracks) {
 
     brack_list.innerHTML += '<a href="https://courtneymcbeth.github.io/march-madness-2023/bracket?number=' + b.number.toString() + '">';
     brack_list.innerHTML += '<div class="brack_over">';
-    brack_list.innerHTML += '<img src="' + b.avatar_url + '"/>';
+    brack_list.innerHTML += '<img src="' + b.img + '"/>';
     brack_list.innerHTML += '<div class="brack_over_data">';
     brack_list.innerHTML += '<div class="brack_over_data_top">';
     brack_list.innerHTML += '<h2>' + b.name + '</h2>';
-    brack_list.innerHTML += '<h2>#' + i.toString() + '</h2>';
+    brack_list.innerHTML += '<h2>#' + (i + 1).toString() + '</h2>';
     brack_list.innerHTML += '</div><div class="brack_over_data_bot">';
     brack_list.innerHTML += '<h3>Score: ' + b.score.toString() + '</h3>';
     brack_list.innerHTML += '</div></div></div></a>';
