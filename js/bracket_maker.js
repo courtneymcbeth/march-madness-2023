@@ -271,7 +271,6 @@ function setNextOnClick(id, pos) {
 
   if (otherTeam.length > 0 && otherTeam.trim().length > 0) {
     console.log("other team: " + otherTeam);
-    console.log(otherTeam);
     // Clear the existing boxes with 
     var clearId = id;
     var clearPos = pos;
@@ -369,7 +368,7 @@ function setNextOnClick(id, pos) {
     }
     if (clearId === "f4-championship" &&
       document.getElementById("f4-winner").innerText.trim().length > 7 &&
-      document.getElementById("f4-winner").innerText.split(" ")[1] === otherTeam) {
+      document.getElementById("f4-winner").innerText.slice(document.getElementById("f4-winner").innerText.indexOf(" ") + 1) === otherTeam) {
       document.getElementById("f4-winner").innerText = "Winner: ";
       console.log("cleared" + document.getElementById("f4-winner").innerText)
       numEmpty = numEmpty + 1;
