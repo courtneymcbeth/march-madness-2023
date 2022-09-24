@@ -7,6 +7,7 @@ function listBrackets() {
 
   xhr.onload = function () {
     var ret_data = JSON.parse(this.responseText);
+    console.log(ret_data);
 
     if (ret_data.length > 0) {
       var brack_list = document.getElementById("bracket_list");
