@@ -65,7 +65,7 @@ function setTeams(data) {
       children = document.getElementById(regions[j] + "-r1-" + i.toString()).children;
       children[0].innerText = data[regions[j]]["first"][idx];
       if (gold[regions[j]]["first"][idx].trim().length > 0) {
-        if (data[regions[j]]["first"][idx] === gold[regions[j]]["first"][idx]) {
+        if (data[regions[j]]["first"][idx].toUpperCase() === gold[regions[j]]["first"][idx].toUpperCase()) {
           children[0].classList.add("correct");
         } else {
           children[0].classList.add("wrong");
@@ -74,7 +74,7 @@ function setTeams(data) {
 
       children[1].innerText = data[regions[j]]["first"][idx + 1];
       if (gold[regions[j]]["first"][idx + 1].trim().length > 0) {
-        if (data[regions[j]]["first"][idx + 1] === gold[regions[j]]["first"][idx + 1]) {
+        if (data[regions[j]]["first"][idx + 1].toUpperCase() === gold[regions[j]]["first"][idx + 1].toUpperCase()) {
           children[1].classList.add("correct");
         } else {
           children[1].classList.add("wrong");
@@ -89,7 +89,7 @@ function setTeams(data) {
       children = document.getElementById(regions[j] + "-r2-" + i.toString()).children;
       children[0].innerText = data[regions[j]]["second"][idx];
       if (gold[regions[j]]["second"][idx].trim().length > 0) {
-        if (data[regions[j]]["second"][idx] === gold[regions[j]]["second"][idx]) {
+        if (data[regions[j]]["second"][idx].toUpperCase() === gold[regions[j]]["second"][idx].toUpperCase()) {
           children[0].classList.add("correct");
         } else {
           children[0].classList.add("wrong");
@@ -98,7 +98,7 @@ function setTeams(data) {
 
       children[1].innerText = data[regions[j]]["second"][idx + 1];
       if (gold[regions[j]]["second"][idx + 1].trim().length > 0) {
-        if (data[regions[j]]["second"][idx + 1] === gold[regions[j]]["second"][idx + 1]) {
+        if (data[regions[j]]["second"][idx + 1].toUpperCase() === gold[regions[j]]["second"][idx + 1].toUpperCase()) {
           children[1].classList.add("correct");
         } else {
           children[1].classList.add("wrong");
@@ -113,7 +113,7 @@ function setTeams(data) {
       children = document.getElementById(regions[j] + "-r3-" + i.toString()).children;
       children[0].innerText = data[regions[j]]["sweet16"][idx];
       if (gold[regions[j]]["sweet16"][idx].trim().length > 0) {
-        if (data[regions[j]]["sweet16"][idx] === gold[regions[j]]["sweet16"][idx]) {
+        if (data[regions[j]]["sweet16"][idx].toUpperCase() === gold[regions[j]]["sweet16"][idx].toUpperCase()) {
           children[0].classList.add("correct");
         } else {
           children[0].classList.add("wrong");
@@ -122,7 +122,7 @@ function setTeams(data) {
 
       children[1].innerText = data[regions[j]]["sweet16"][idx + 1];
       if (gold[regions[j]]["sweet16"][idx + 1].trim().length > 0) {
-        if (data[regions[j]]["sweet16"][idx + 1] === gold[regions[j]]["sweet16"][idx + 1]) {
+        if (data[regions[j]]["sweet16"][idx + 1].toUpperCase() === gold[regions[j]]["sweet16"][idx + 1].toUpperCase()) {
           children[1].classList.add("correct");
         } else {
           children[1].classList.add("wrong");
@@ -137,7 +137,7 @@ function setTeams(data) {
       children = document.getElementById(regions[j] + "-r4").children;
       children[0].innerText = data[regions[j]]["elite8"][idx];
       if (gold[regions[j]]["elite8"][idx].trim().length > 0) {
-        if (data[regions[j]]["elite8"][idx] === gold[regions[j]]["elite8"][idx]) {
+        if (data[regions[j]]["elite8"][idx].toUpperCase() === gold[regions[j]]["elite8"][idx].toUpperCase()) {
           children[0].classList.add("correct");
         } else {
           children[0].classList.add("wrong");
@@ -146,7 +146,7 @@ function setTeams(data) {
 
       children[1].innerText = data[regions[j]]["elite8"][idx + 1];
       if (gold[regions[j]]["elite8"][idx + 1].trim().length > 0) {
-        if (data[regions[j]]["elite8"][idx + 1] === gold[regions[j]]["elite8"][idx + 1]) {
+        if (data[regions[j]]["elite8"][idx + 1].toUpperCase() === gold[regions[j]]["elite8"][idx + 1].toUpperCase()) {
           children[1].classList.add("correct");
         } else {
           children[1].classList.add("wrong");
@@ -159,7 +159,7 @@ function setTeams(data) {
   children = document.getElementById("f4-east-west").children;
   children[0].innerText = data.final4.west;
   if (gold["final4"]["west"].trim().length > 0) {
-    if (data["final4"]["west"] === gold["final4"]["west"]) {
+    if (data["final4"]["west"].toUpperCase() === gold["final4"]["west"].toUpperCase()) {
       children[0].classList.add("correct");
     } else {
       children[0].classList.add("wrong");
@@ -168,7 +168,7 @@ function setTeams(data) {
 
   children[1].innerText = data.final4.east;
   if (gold["final4"]["east"].trim().length > 0) {
-    if (data["final4"]["east"] === gold["final4"]["east"]) {
+    if (data["final4"]["east"].toUpperCase() === gold["final4"]["east"].toUpperCase()) {
       children[1].classList.add("correct");
     } else {
       children[1].classList.add("wrong");
@@ -178,7 +178,7 @@ function setTeams(data) {
   children = document.getElementById("f4-south-midwest").children;
   children[0].innerText = data.final4.south;
   if (gold["final4"]["south"].trim().length > 0) {
-    if (data["final4"]["south"] === gold["final4"]["south"]) {
+    if (data["final4"]["south"].toUpperCase() === gold["final4"]["south"].toUpperCase()) {
       children[0].classList.add("correct");
     } else {
       children[0].classList.add("wrong");
@@ -187,7 +187,7 @@ function setTeams(data) {
 
   children[1].innerText = data.final4.midwest;
   if (gold["final4"]["midwest"].trim().length > 0) {
-    if (data["final4"]["midwest"] === gold["final4"]["midwest"]) {
+    if (data["final4"]["midwest"].toUpperCase() === gold["final4"]["midwest"].toUpperCase()) {
       children[1].classList.add("correct");
     } else {
       children[1].classList.add("wrong");
@@ -197,7 +197,7 @@ function setTeams(data) {
   children = document.getElementById("f4-championship").children;
   children[0].innerText = data["championship"]["east-west"];
   if (gold["championship"]["east-west"].trim().length > 0) {
-    if (data["championship"]["east-west"] === gold["championship"]["east-west"]) {
+    if (data["championship"]["east-west"].toUpperCase() === gold["championship"]["east-west"].toUpperCase()) {
       children[0].classList.add("correct");
     } else {
       children[0].classList.add("wrong");
@@ -206,16 +206,16 @@ function setTeams(data) {
 
   children[1].innerText = data["championship"]["south-midwest"];
   if (gold["championship"]["south-midwest"].trim().length > 0) {
-    if (data["championship"]["south-midwest"] === gold["championship"]["south-midwest"]) {
-      children[0].classList.add("correct");
+    if (data["championship"]["south-midwest"].toUpperCase() === gold["championship"]["south-midwest"].toUpperCase()) {
+      children[1].classList.add("correct");
     } else {
-      children[0].classList.add("wrong");
+      children[1].classList.add("wrong");
     }
   }
 
   document.getElementById("f4-winner").innerText = "Winner: " + data["championship"]["winner"];
   if (gold["championship"]["winner"].trim().length > 0) {
-    if (data["championship"]["winner"] === gold["championship"]["winner"]) {
+    if (data["championship"]["winner"].toUpperCase() === gold["championship"]["winner"].toUpperCase()) {
       document.getElementById("f4-winner").classList.add("correct");
     } else {
       document.getElementById("f4-winner").classList.add("wrong");
