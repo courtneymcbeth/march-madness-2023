@@ -463,7 +463,7 @@ function checkSubmission() {
   var post_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues';
 
   var req = new Object();
-  req.title = "Bracket Test";
+  req.title = "Bracket";
   req.body = JSON.stringify(obj);
 
   var jsonString = JSON.stringify(req);
@@ -478,6 +478,7 @@ function checkSubmission() {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 201) {
       var ret_data = JSON.parse(this.responseText);
       console.log(ret_data)
+      location.href = 'https://courtneymcbeth.github.io/march-madness-2023/';
     }
   }
   xhr.send(jsonString);
