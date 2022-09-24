@@ -459,9 +459,10 @@ function checkSubmission() {
     return;
   }
 
-  if (document.getElementById('fname').value.trim().length < 1 || document.getElementById('lname').value.trim().length) {
+  if (document.getElementById('fname').value.trim().length < 1 || document.getElementById('lname').value.trim().length < 1) {
     document.getElementById("note").innerText = "Please fill in your first and last name.";
     document.getElementById("note").style.color = "red";
+    return;
   }
 
   var auth_code = getQueryVariable('auth');
