@@ -267,6 +267,7 @@ function setNextOnClick(id, pos) {
   if (pos == 0) {
     otherPos = 1;
   }
+  var otherTeam = document.getElementById(id).children[otherPos].innerText;
 
   if (otherTeam.length > 0 && otherTeam.trim().length > 0) {
     console.log("other team: " + otherTeam);
