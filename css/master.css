@@ -146,10 +146,16 @@ nav ul li a {
 /* ------------------------------------------------------ */
 
 .full_orange {
+  margin: 0px;
   height: 100vh;
   width: 100vw;
-  background-color: #4158D0;
-  background-image: linear-gradient(166deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background: rgb(0,25,245);
+  background: linear-gradient(40deg, rgba(0,25,245,1) 0%, rgba(255,0,0,1) 50%, rgba(255,149,0,1) 100%);
+  color: white;
+}
+
+.full_orange h1 {
+  font-size: 100pt;
 }
 
 /* ------------------------------------------------------ */
