@@ -158,9 +158,10 @@ nav ul li a {
 .full_orange h1 {
   font-size: 100pt;
   color: white;
+  font-family: 'Permanent Marker', cursive;
 }
 
-.full_orange * {
+.full_orange h1, .full_orange h2, .full_orange h3, .full_orange h4 {
   margin-right: 10vw;
 }
 
