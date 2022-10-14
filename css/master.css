@@ -168,10 +168,19 @@ nav ul li a {
 
 /* ------------------------------------------------------ */
 
+#join_button {
+  padding: 20px;
+  background-color: orangered;
+  color: white;
+  font-size: 36pt;
+  border-radius: 15px;
+}
+
 .brack_over {
   display: flex;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
+  margin-top: 10px;
 }
 
 .brack_over img {

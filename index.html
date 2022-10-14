@@ -10,15 +10,9 @@ title: March Madness 2023
 <div class="main_content full_orange">
   <h1>Join the Tournament</h1>
   <h2>Sign-up ends March 14</h2>
-  <h3>Authorized to join? Enter your name to build your bracket:</h3>
+  <h3>Authorized to join? Click below to build your bracket:</h3>
 
-  <form action="bracket_creator.html">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" style="border: 1px solid black"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" style="border: 1px solid black">
-    <input type="submit" value="Start Playing">
-  </form>
+  <button id="join_button" type="button" onclick="accessBuilder();">Join Now</button>
 
   <h4>Current Players</h4>
   <div id="bracket_list">

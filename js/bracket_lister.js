@@ -112,3 +112,8 @@ function calcScore(brack) {
 
   return score;
 }
+
+
+function accessBuilder() {
+  location.href = "https://courtneymcbeth.github.io/march-madness-2023/bracket_creator";
+}
