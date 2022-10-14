@@ -153,12 +153,15 @@ nav ul li a {
   background: linear-gradient(40deg, rgba(0,25,245,1) 0%, rgba(255,0,0,1) 50%, rgba(255,149,0,1) 100%);
   color: white;
   text-align: left;
-  padding: 10%;
 }
 
 .full_orange h1 {
   font-size: 100pt;
   color: white;
+}
+
+.full_orange * {
+  margin-right: 10vw;
 }
 
 /* ------------------------------------------------------ */
