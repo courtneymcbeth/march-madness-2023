@@ -165,6 +165,7 @@ nav ul li a {
   text-align: left;
   margin-right: 10vw;
   margin-left: 5vw;
+  margin-top: 10vh;
 }
 
 .full_orange h2 {
@@ -182,6 +183,10 @@ nav ul li a {
   font-weight: 400;
   margin-top: 2vh;
   margin-bottom: 4vh;
+}
+
+#bracket_list {
+  margin-bottom: 5vh;
 }
 
 .brack_over {
