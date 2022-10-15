@@ -11,7 +11,7 @@
 html {
   font-family: 'Roboto Condensed', sans-serif;
   text-transform: uppercase;
-  color: #005eb8;
+  color: var(--dark-blue);
   background: white;
   text-emphasis: none;
   /* margin-top: 10px; */
@@ -87,7 +87,7 @@ nav ul li a {
   box-sizing: border-box;
   transition: .5s;
   z-index: 2;
-  background-color: #005eb8;
+  background-color: var(--dark-blue);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -136,7 +136,7 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #005eb8;
+  color: var(--dark-blue);
   padding: 20px;
 }
 
@@ -409,7 +409,7 @@ nav ul li a {
 }
 
 .winner-pick.correct {
-  color: #005eb8 !important;
+  color: var(--dark-blue) !important;
 }
 
 .round {
