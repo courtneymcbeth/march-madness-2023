@@ -112,6 +112,10 @@ nav ul li a {
   color: white;
 }
 
+.below_info {
+  margin-top: 120px;
+}
+
 .main_content {
   margin-top: 60px;
   display: flex;

@@ -47,6 +47,7 @@ async function loadBracket() {
     var infoHTML = '<img src="' + ret_data["user"]["avatar_url"] + '" height="40px" width="40px" />';
     infoHTML += '<h5>' + ret_data.title + ' - Score: ' + score.toString() + '</h5>';
     document.getElementById("info_bar").innerHTML += infoHTML;
+    document.title = "Bracket | " + ret_data.title.split(" ")[0];
 
     setTeams(JSON.parse(ret_data.body));
   };
