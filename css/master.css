@@ -307,6 +307,7 @@ nav ul li a {
   height: 18pt;
   padding: 2pt;
   font-family: 'Roboto Condensed', sans-serif;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 #fname {
@@ -314,7 +315,6 @@ nav ul li a {
 }
 
 .form_left {
-  margin-left: 5vw;
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -329,7 +329,8 @@ nav ul li a {
 
 .form_left input {
   margin-top: 20px;
-  padding: 5px;
+  margin-bottom: 5vh;
+  padding: 10px;
   font-family: 'Roboto Condensed', sans-serif;
   background-color: blueviolet;
   color: white;
