@@ -38,5 +38,5 @@ if (typeof temp_code !== "undefined") {
   console.log("sent request");
 } else {
   // somehow bypassed, send them back
-  window.location.replace('https://courtneymcbeth.github.io/march-madness-2023/bracket_creator');
+  window.location.replace('https://courtneymcbeth.github.io/march-madness-2023/builder/bracket_creator');
 }
