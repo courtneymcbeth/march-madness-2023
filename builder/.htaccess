@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Bracket Builder"
+AuthUserFile https://courtneymcbeth.github.io/march-madness-2023/builder/.htpasswd
+require valid-user

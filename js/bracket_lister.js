@@ -115,5 +115,5 @@ function calcScore(brack) {
 
 
 function accessBuilder() {
-  location.href = "https://courtneymcbeth.github.io/march-madness-2023/bracket_creator";
+  location.href = "https://courtneymcbeth.github.io/march-madness-2023/builder/bracket_creator";
 }
