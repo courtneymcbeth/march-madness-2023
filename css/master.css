@@ -178,6 +178,8 @@ nav ul li a {
   font-size: 28pt;
   border-radius: 15px;
   font-weight: 400;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .brack_over {
@@ -185,8 +187,7 @@ nav ul li a {
   background-color: rgba(255, 255, 255, 0.75);
   border-radius: 10px;
   margin-top: 10px;
-  padding: 5px;
-  margin: 0px;
+  padding: 10px;
 }
 
 .brack_over img {
