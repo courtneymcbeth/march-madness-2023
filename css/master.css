@@ -286,13 +286,27 @@ nav ul li a {
   margin-top: 8vh;
 }
 
-.form_center {
+.center_form {
+  margin-top: 20px;
   width: 100vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  color: white;
+  font-size: 20pt;
+}
+
+.center_form label {
+  margin-right: 10px;
+}
+
+.center_form input {
+  border: none;
+  height: 18pt;
+  padding: 2pt;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 #fname {
