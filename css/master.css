@@ -283,8 +283,8 @@ nav ul li a {
 /* ------------------------------------------------------ */
 
 .full_blue_purple {
-  background-color: #21D4FD;
-  background-image: linear-gradient(135deg, #21D4FD 0%, #B721FF 100%);
+  background: rgb(111,0,226);
+  background: linear-gradient(306deg, rgba(111,0,226,1) 0%, rgba(41,255,248,1) 100%);
   margin: 0px;
   height: 100vh;
   width: 100vw;
@@ -357,8 +357,8 @@ nav ul li a {
 }
 
 .full_green {
-  background: rgb(111,0,226);
-  background: linear-gradient(306deg, rgba(111,0,226,1) 0%, rgba(41,255,248,1) 100%);
+  background: rgb(0,255,70);
+  background: linear-gradient(306deg, rgba(0,255,70,1) 0%, rgba(41,205,255,1) 100%);
   margin: 0px;
   height: 100vh;
   width: 100vw;
@@ -451,7 +451,7 @@ nav ul li a {
 }
 
 .winner-pick.wrong {
-  color: rgba(255, 23, 23, 0.89) !important;
+  color: rgb(255, 23, 23) !important;
 }
 
 .winner-pick.correct {
