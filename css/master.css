@@ -698,3 +698,19 @@ nav ul li a {
   }
 
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  padding-left: 2px;
+  color: #002D5F;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  padding-left: 2px;
+  color: #002D5F;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  padding-left: 2px;
+  color: #002D5F;
+}
