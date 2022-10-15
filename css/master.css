@@ -172,6 +172,12 @@ nav ul li a {
   font-size: 24pt;
 }
 
+.left {
+  text-align: left;
+  margin-right: 10vw;
+  margin-left: 5vw;
+}
+
 /* ------------------------------------------------------ */
 
 #join_button {
