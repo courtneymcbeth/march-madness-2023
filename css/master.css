@@ -196,6 +196,7 @@ nav ul li a {
 /* ------------------------------------------------------ */
 
 #join_button {
+  font-family: 'Roboto Condensed', sans-serif;
   padding: 15px;
   background-color: orangered;
   color: white;
