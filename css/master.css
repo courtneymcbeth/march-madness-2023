@@ -343,12 +343,13 @@ nav ul li a {
   margin-bottom: 5vh;
   padding: 10px;
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: blueviolet;
+  background-color: #31fb2d;
   color: white;
   text-transform: uppercase;
   font-size: 20pt;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .full_green {
