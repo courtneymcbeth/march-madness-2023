@@ -308,6 +308,8 @@ nav ul li a {
   border: none;
   height: 18pt;
   padding: 2pt;
+  padding-left: 6pt;
+  padding-right: 6pt;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
