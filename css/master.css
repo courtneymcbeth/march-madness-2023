@@ -357,8 +357,8 @@ nav ul li a {
 }
 
 .full_green {
-  background: rgb(0,226,199);
-  background: linear-gradient(45deg, rgba(0,226,199,1) 0%, rgba(54,223,46,1) 58%, rgba(194,223,46,1) 100%);
+  background: rgb(111,0,226);
+  background: linear-gradient(306deg, rgba(111,0,226,1) 0%, rgba(41,255,248,1) 100%);
   margin: 0px;
   height: 100vh;
   width: 100vw;
