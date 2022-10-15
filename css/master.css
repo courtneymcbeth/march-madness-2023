@@ -178,6 +178,10 @@ nav ul li a {
   text-align: left;
 }
 
+.intro_info h2 {
+  margin-top: 2vh;
+}
+
 .intro h1 {
   font-size: 80pt;
   color: white;
@@ -200,7 +204,7 @@ nav ul li a {
   font-weight: 400;
   margin-top: 2vh;
   margin-bottom: 4vh;
-  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.6);
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.4);
 }
 
 #bracket_list {
@@ -208,7 +212,7 @@ nav ul li a {
 }
 
 #bracket_list a {
-  color: #4245f5;
+  color: #191b9c;
 }
 
 .brack_over {
