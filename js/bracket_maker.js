@@ -455,6 +455,7 @@ function checkSubmission() {
   if (numEmpty > 0) {
     document.getElementById("note").innerText = "Please fill in any blanks before submitting.";
     document.getElementById("note").style.color = "red";
+    document.getElementById("note").style.textShadow = "-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;"
     console.log(numEmpty);
     return;
   }

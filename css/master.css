@@ -703,16 +703,16 @@ nav ul li a {
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   padding-left: 2px;
-  color: #002D5F;
+  color: #555;
   opacity: 1; /* Firefox */
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
   padding-left: 2px;
-  color: #002D5F;
+  color: #555;
 }
 
 ::-ms-input-placeholder { /* Microsoft Edge */
   padding-left: 2px;
-  color: #002D5F;
+  color: #555;
 }
