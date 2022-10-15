@@ -69,6 +69,13 @@ nav ul li a {
   transition: .5s;
 }
 
+#nav_players {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .main_nav {
   display: flex;
   flex-direction: row;
