@@ -311,6 +311,7 @@ nav ul li a {
   padding-left: 6pt;
   padding-right: 6pt;
   font-family: 'Roboto Condensed', sans-serif;
+  color: var(--dark-blue);
 }
 
 #fname {
