@@ -37,8 +37,8 @@ function displayBracks(bracks) {
     brackHTML += '<img src="' + b.imgurl + '"/>';
     brackHTML += '<div class="brack_over_data">';
     brackHTML += '<div class="brack_over_data_top">';
+    brackHTML += '<h2 class="rank">#' + (i + 1).toString() + '</h2>';
     brackHTML += '<h2>' + b.name + '</h2>';
-    brackHTML += '<h2>#' + (i + 1).toString() + '</h2>';
     brackHTML += '</div><div class="brack_over_data_bot">';
     brackHTML += '<h3>Score: ' + b.score.toString() + '</h3>';
     brackHTML += '</div></div></div></a>';
