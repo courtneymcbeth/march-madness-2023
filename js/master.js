@@ -1,11 +1,26 @@
-var links = document.getElementsByClassName("player_link_inside");
+async function listNav() {
+  let xhr = new XMLHttpRequest();
+  var get_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues';
+  get_url += '?state=open';
+  xhr.open('GET', get_url, true);
 
-const url = window.location.href.split('/');
+  xhr.onload = function () {
+    var ret_data = JSON.parse(this.responseText);
+    console.log(ret_data);
 
-for (var link of links) {
-  const name = link.innerHTML;
-  const name_lc = name.toLowerCase();
-  if (url[url.length - 2].includes(name_lc)) {
-    link.style.color = "#005eb8";
-  }
+    var players = document.getElementById("nav_players");
+
+    if (ret_data.length > 0) {
+      for (let i = 0; i < ret_data.length; i++) {
+        var name = ret_data[i].title.split(" ")[0];
+        var url = "https://courtneymcbeth.github.io/march-madness-2023/bracket?number=" + ret_data[i].id.toString();
+        var link = '<a href="' + url + '">' + name + '</a>';
+        players.innerHTML += link;
+      }
+    }
+  };
+
+  xhr.send();
 }
+
+listNav();
