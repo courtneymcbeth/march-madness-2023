@@ -313,6 +313,31 @@ nav ul li a {
   margin-right: 20px;
 }
 
+.form_left {
+  margin-left: 5vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.form_left h6 {
+  color: white;
+  font-size: 20pt;
+}
+
+.form_left input {
+  margin-top: 20px;
+  padding: 5px;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: blueviolet;
+  color: white;
+  text-transform: uppercase;
+  font-size: 20pt;
+  border-radius: 10px;
+}
+
 #bracket {
   margin-top: 20px;
 }
@@ -376,7 +401,7 @@ nav ul li a {
 }
 
 .winner-pick {
-  color: rgba(0, 0, 0, 0.8) !important;
+  color: white !important;
 }
 
 .winner-pick.wrong {
@@ -471,7 +496,12 @@ nav ul li a {
 .champion li, .round li {
   background-color: #fff;
   box-shadow: none;
-  opacity: 0.8;
+  opacity: 1;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.fa-trophy {
+  color: white !important;
 }
 
 .current li {
@@ -480,7 +510,7 @@ nav ul li a {
 
 .current li.team {
   background-color: #fff;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   opacity: 1;
 }
 
