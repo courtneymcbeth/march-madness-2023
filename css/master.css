@@ -157,6 +157,7 @@ nav ul li a {
   background-position: center center;
   position: fixed;
   color: white;
+  z-index: -1;
 }
 
 .intro {
@@ -174,6 +175,7 @@ nav ul li a {
   text-align: left;
   margin-right: 10vw;
   margin-left: 5vw;
+  left: 5vw;
   margin-top: 10vh;
 }
 
@@ -185,6 +187,7 @@ nav ul li a {
   text-align: left;
   margin-right: 10vw;
   margin-left: 5vw;
+  left: 5vw;
 }
 
 /* ------------------------------------------------------ */
@@ -213,13 +216,14 @@ nav ul li a {
   padding-right: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
+  align-items: center;
 }
 
 .brack_over img {
   width: 50px;
   height: 50px;
   border-radius: 25px;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .rank {
