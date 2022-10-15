@@ -40,7 +40,7 @@ nav {
   box-sizing: border-box;
   transition: .5s;
   z-index: 2;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: white;
 }
 
 nav .logo {
@@ -110,11 +110,12 @@ nav ul li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
 .main_content h1 {
-  color: black;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .score-wrap {
@@ -285,6 +286,19 @@ nav ul li a {
   margin-top: 8vh;
 }
 
+.form_center {
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#fname {
+  margin-right: 20px;
+}
+
 #bracket {
   margin-top: 20px;
 }
@@ -396,7 +410,7 @@ nav ul li a {
   font-size: 11px;
   text-transform: uppercase;
   float: right;
-  color: #2C7399;
+  color: var(--dark-blue);
   font-weight: bold;
   font-family: 'Roboto Condensed', sans-serif;
   position: absolute;
@@ -434,7 +448,7 @@ nav ul li a {
 .round-details {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 13px;
-  color: #005eb8;
+  color: white;
   text-transform: uppercase;
   text-align: center;
   height: 40px;
@@ -443,7 +457,7 @@ nav ul li a {
 .champion li, .round li {
   background-color: #fff;
   box-shadow: none;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .current li {
@@ -522,8 +536,7 @@ nav ul li a {
 .date {
   font-size: 10px;
   letter-spacing: 2px;
-  font-family: 'Istok Web', sans-serif;
-  color: black;
+  color: white;
 }
 
 
