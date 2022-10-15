@@ -180,7 +180,7 @@ nav ul li a {
   margin-right: 10vw;
   margin-left: 5vw;
   margin-top: 10vh;
-  text-align: left;
+  text-align: left !important;
 }
 
 .intro_info h2 {
@@ -318,7 +318,7 @@ nav ul li a {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
