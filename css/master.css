@@ -369,21 +369,6 @@ nav ul li a {
   z-index: -1;
 }
 
-#comment_toggle {
-  height: 40px;
-  width: 40px;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.75);
-  position: fixed;
-  top: 95vh;
-  left: 95vw;
-  cursor: pointer;
-}
-
-.fa-comment-o {
-  font-size: 20px;
-}
-
 #bracket {
   margin-top: 20px;
 }

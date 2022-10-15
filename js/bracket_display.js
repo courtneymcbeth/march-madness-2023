@@ -1,4 +1,6 @@
 var gold = {};
+var authCode = "";
+var issueNum = -1;
 
 /**
  * Decodes the url to get the requested parameter (for this page, 'auth')
@@ -32,6 +34,7 @@ function readTextFile(file, callback) {
 
 async function loadBracket() {
   var num = getQueryVariable('number');
+  issueNum = parseInt(num);
 
   let xhr = new XMLHttpRequest();
   var get_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues';
@@ -279,4 +282,70 @@ function setTeams(data) {
       document.getElementById("f4-winner").innerText += ' - 0';
     }
   }
+}
+
+function displayComments() {
+  document.getElementById("comment_form").style.visibility = "visible";
+  document.getElementById("comment_sign_in").style.visibility = "hidden";
+
+  let xhr = new XMLHttpRequest();
+  var get_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues/' + issueNum.toString() + '/comments';
+  get_url += '?per_page=100';
+  xhr.open('GET', get_url, true);
+  // xhr.setRequestHeader('Authorization', 'token ' + getQueryVariable('auth'));
+
+  xhr.onload = function () {
+    var ret_data = JSON.parse(this.responseText);
+    console.log(ret_data.body);
+
+    var inside = document.getElementById("comments_inside");
+
+    if (ret_data.length() < 1) {
+      inside.innerHTML += '<h1 class="first_comment">Be the first to comment...</h1>';
+    } else {
+      for (let i = 0; i < ret_data.length(); i++) {
+        var comm = '<div class="comment_outer"><div class="comment_top"><img src="' + ret_data[i].user.avatar_url + '"/>';
+        comm += '<h1>' + ret_data[i].user.login + '</h1></div>';
+        comm += '<p>' + ret_data[i].body + "</p></div>"
+        inside.innerHTML += comm;
+      }
+    }
+  };
+
+  xhr.send();
+}
+
+function signIn() {
+  if (!getQueryVariable('auth')) {
+    location.href = "https://courtneymcbeth.github.io/march-madness-2023/comment_auth?redir=" + location.href;
+  }
+}
+
+function postComment() {
+  if (!getQueryVariable('auth')) {
+    location.href = "https://courtneymcbeth.github.io/march-madness-2023/comment_auth?redir=" + location.href;
+  }
+
+  authCode = getQueryVariable('auth');
+  var post_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues/' + issueNum + '/comments';
+
+  var req = new Object();
+  req.body = document.getElementById('comment_area').value.trim();
+
+  var jsonString = JSON.stringify(req);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("POST", post_url, true);
+  var token = 'token ' + authCode;
+  xhr.setRequestHeader('Authorization', token);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+
+  xhr.onreadystatechange = function () {
+    if (this.readyState === XMLHttpRequest.DONE && this.status === 201) {
+      var ret_data = JSON.parse(this.responseText);
+      console.log(ret_data)
+      displayComments();
+    }
+  }
+  xhr.send(jsonString);
 }

@@ -3,7 +3,7 @@ layout: default
 title: Bracket
 ---
 <script src="{{ site.baseurl }}/js/bracket_display.js"></script>
-<script>loadBracket();</script>
+<script>loadBracket(); displayComments();</script>
 
 <div id="info_bar" class="info_bar">
 </div>
@@ -14,6 +14,13 @@ title: Bracket
   {% include bracket_disp.html %}
 </div>
 
-<!-- <div id="comment_toggle">
-  <i class="fa fa-comment-o" aria-hidden="true"></i>
-</div> -->
+<div class="comments">
+  <h1>Comments</h1>
+  <div id="comments_inside"></div>
+  <button id="comment_sign_in" onclick="signIn();">Sign-in to Comment</button>
+  <form id="comment_form" style="visibility: hidden;" action="javascript:postComment()">
+    <label for="comment_area">Add your Comment:</label>
+    <textarea id="comment_area" name="comment_area" rows="4" cols="50"></textarea>
+    <input type="submit" value="Post">
+  </form>
+</div>
