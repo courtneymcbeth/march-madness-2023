@@ -436,11 +436,11 @@ nav ul li a {
 }
 
 .winner-pick.wrong {
-  color: rgba(156, 16, 16, 0.89) !important;
+  color: rgba(255, 23, 23, 0.89) !important;
 }
 
 .winner-pick.correct {
-  color: var(--dark-blue) !important;
+  font-weight: 600;
 }
 
 .round {
