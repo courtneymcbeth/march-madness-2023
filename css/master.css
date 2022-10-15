@@ -569,7 +569,7 @@ nav ul li a {
 
 .wrong:not(.winner-pick) {
   opacity: 1 !important;
-  background-color: rgba(156, 16, 16, 0.89) !important;
+  background-color: rgb(255, 23, 23) !important;
   color: white !important;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
 }
