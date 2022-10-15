@@ -6,6 +6,7 @@
   border: 0;
   padding: 0;
   margin: 0;
+  font-weight: 400;
 }
 
 html {
@@ -45,7 +46,7 @@ nav {
 
 nav .logo {
   align-content: center;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 nav ul {
@@ -180,7 +181,7 @@ nav ul li a {
   margin-right: 10vw;
   margin-left: 5vw;
   margin-top: 10vh;
-  text-align: left !important;
+  text-align: left;
 }
 
 .intro_info h2 {
@@ -192,6 +193,7 @@ nav ul li a {
   color: white;
   font-family: 'Permanent Marker', cursive;
   line-height: 1.3;
+  text-align: center;
 }
 
 .intro h2 {
@@ -207,7 +209,7 @@ nav ul li a {
   color: white;
   font-size: 28pt;
   border-radius: 15px;
-  font-weight: 700;
+  font-weight: 600;
   margin-top: 8vh;
   margin-bottom: 8vh;
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
@@ -307,7 +309,6 @@ nav ul li a {
   height: 18pt;
   padding: 2pt;
   font-family: 'Roboto Condensed', sans-serif;
-  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 #fname {
@@ -337,6 +338,7 @@ nav ul li a {
   text-transform: uppercase;
   font-size: 20pt;
   border-radius: 10px;
+  cursor: pointer;
 }
 
 #bracket {
@@ -451,7 +453,7 @@ nav ul li a {
   text-transform: uppercase;
   float: right;
   color: var(--dark-blue);
-  font-weight: bold;
+  font-weight: 600;
   font-family: 'Roboto Condensed', sans-serif;
   position: absolute;
   right: 5px;
@@ -513,7 +515,7 @@ nav ul li a {
   background-color: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
   opacity: 1;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .correct:not(.winner-pick) {
