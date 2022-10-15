@@ -16,6 +16,7 @@ html {
 body {
   background-size: cover;
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 a {
