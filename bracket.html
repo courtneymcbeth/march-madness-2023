@@ -18,9 +18,11 @@ title: Bracket
   <h1>Comments</h1>
   <div id="comments_inside"></div>
   <button id="comment_sign_in" onclick="signIn();">Sign-in to Comment</button>
-  <form id="comment_form" style="visibility: hidden;" action="javascript:postComment()">
-    <label for="comment_area">Add your Comment:</label>
-    <textarea id="comment_area" name="comment_area" rows="4" cols="50"></textarea>
-    <input type="submit" value="Post">
-  </form>
+  <div id="comment_form" style="visibility: hidden;">
+    <form action="javascript:postComment()">
+      <label for="comment_area">Add your Comment:</label>
+      <textarea id="comment_area" name="comment_area" rows="4" cols="50"></textarea>
+      <input type="submit" value="Post">
+    </form>
+  </div>
 </div>
