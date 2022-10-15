@@ -13,7 +13,7 @@ async function listNav() {
     if (ret_data.length > 0) {
       for (let i = 0; i < ret_data.length; i++) {
         var name = ret_data[i].title.split(" ")[0];
-        var url = "https://courtneymcbeth.github.io/march-madness-2023/bracket?number=" + ret_data[i].id.toString();
+        var url = "https://courtneymcbeth.github.io/march-madness-2023/bracket?number=" + ret_data[i].number.toString();
         var link = '<a href="' + url + '">' + name + '</a>';
         players.innerHTML += link;
       }
