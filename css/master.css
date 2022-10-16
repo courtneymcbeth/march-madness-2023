@@ -294,7 +294,7 @@ nav ul li a {
   color: white;
 }
 
-.comments input[type=submit] {
+.comments input[type=submit], #comment_sign_in {
   color: white;
   background-color: var(--dark-blue);
   text-transform: uppercase;
