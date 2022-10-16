@@ -362,10 +362,10 @@ nav ul li a {
 .comment_top {
   display: flex;
   flex-direction: row;
-  align-items: center
+  align-items: center;
 }
 
-.comment_top {
+.comment_top h2 {
   font-size: 12pt;
 }
 
