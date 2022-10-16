@@ -64,9 +64,9 @@ async function loadBracket() {
 async function displayGoldBracket() {
   await readTextFile("gold_bracket.json", function (text) {
     gold = JSON.parse(text);
+    console.log(gold);
+    setTeams(gold);
   });
-  console.log(gold);
-  setTeams(gold);
 }
 
 function calcScore(brack) {
