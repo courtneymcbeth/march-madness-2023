@@ -347,6 +347,7 @@ nav ul li a {
   flex-direction: column;
   padding: 10px;
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 .comment_outer p {

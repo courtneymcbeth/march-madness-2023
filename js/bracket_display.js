@@ -344,6 +344,7 @@ function postComment() {
 
   xhr.onreadystatechange = function () {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 201) {
+      document.getElementById('comment_area').value = "";
       var ret_data = JSON.parse(this.responseText);
       console.log(ret_data)
 
