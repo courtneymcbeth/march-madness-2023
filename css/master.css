@@ -280,6 +280,31 @@ nav ul li a {
   justify-content: center;
 }
 
+.comments {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comments h1 {
+  text-align: center;
+  color: white;
+}
+
+.comments input[type=submit] {
+  color: white;
+  background-color: var(--dark-blue);
+  text-transform: uppercase;
+  font-size: 20pt;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
 /* ------------------------------------------------------ */
 
 .full_blue_purple {
