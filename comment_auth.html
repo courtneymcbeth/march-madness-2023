@@ -36,10 +36,7 @@ title: Sign-in
     console.log("other");
     var temp_code = getQueryVariable('code');
     var redir_var = getQueryVariable('redir');
-    var num = window.location.search.substring(1).split('=')[2];
-    console.log(redir_var);
-    console.log(num)
-    sleep(30000);
+    var num = window.location.search.substring(1).split('=')[2].split("&")[0];
 
     if (typeof temp_code !== "undefined") {
       var access_url = 'https://cors-cm.herokuapp.com/';
