@@ -283,7 +283,7 @@ nav ul li a {
 .comments {
   margin-left: 10vw;
   margin-right: 10vw;
-  max-height: 50vh;
+  max-height: 60vh;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
@@ -327,6 +327,10 @@ nav ul li a {
   color: var(--dark-blue);
 }
 
+#comments_inside {
+  margin-bottom: 20px;
+}
+
 #comments_inside h1 {
   font-size: 16pt;
 }
@@ -340,7 +344,8 @@ nav ul li a {
   color: var(--dark-blue);
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .comment_outer p {
@@ -355,14 +360,14 @@ nav ul li a {
 }
 
 .comment_top {
-  font-size: 16pt;
+  font-size: 12pt;
 }
 
 .comment_top img {
   height: 20px;
   width: 20px;
   border-radius: 10px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 
 /* ------------------------------------------------------ */

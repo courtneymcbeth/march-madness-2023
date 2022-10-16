@@ -286,8 +286,8 @@ function setTeams(data) {
 
 function displayComments() {
   if (typeof getQueryVariable('auth') !== "undefined") {
-    document.getElementById("comment_form").style.visibility = "visible";
-    document.getElementById("comment_sign_in").style.visibility = "hidden";
+    document.getElementById("comment_form").style.display = "flex";
+    document.getElementById("comment_sign_in").style.display = "none";
   }
 
   let xhr = new XMLHttpRequest();
