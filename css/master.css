@@ -335,6 +335,25 @@ nav ul li a {
   color: white;
 }
 
+.comment_outer {
+  background-color: rgba(255, 255, 255, 0.75);
+  color: var(--dark-blue);
+  display: flex;
+  flex-direction: column;
+}
+
+.comment_top {
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+.comment_top img {
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+}
+
 /* ------------------------------------------------------ */
 
 .full_blue_purple {
