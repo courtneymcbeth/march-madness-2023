@@ -330,6 +330,10 @@ nav ul li a {
 
 #comments_inside {
   margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 #comments_inside h1 {
