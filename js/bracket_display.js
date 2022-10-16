@@ -65,6 +65,7 @@ async function displayGoldBracket() {
   await readTextFile("gold_bracket.json", function (text) {
     gold = JSON.parse(text);
   });
+  console.log(gold);
   setTeams(gold);
 }
 
