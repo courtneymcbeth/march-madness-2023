@@ -313,11 +313,14 @@ nav ul li a {
 #comment_form {
   display: flex;
   flex-direction: column;
+  width: 80vw;
 }
 
 #comment_form textarea {
   resize: none;
-  width: 75%;
+  width: calc(100% - 20px);
+  height: 10vh;
+  margin-bottom: 2vh;
   font-family: 'Roboto Condensed', sans-serif;
   padding: 10px;
   color: var(--dark-blue);
