@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: empty
 title: March Madness 2023
 ---
 <!doctype html>
@@ -7,21 +7,24 @@ title: March Madness 2023
 <script src="{{ site.baseurl }}/js/bracket_lister.js"></script>
 <script>listBrackets();</script>
 
-<div class="main_content">
-  <h1>Join the Tournament</h1>
-  <h2>Sign-up ends March 14</h2>
-  <h3>Authorized to join? Enter your name to build your bracket:</h3>
+<div class="full_orange"></div>
+<div class="main_content intro">
+  <div class="intro_info">
+    <h1>March Madness 2023</h1>
+  </div>
 
-  <form action="bracket_creator.html">
-    <label for="fname">First name:</label><br>
-    <input type="text" id="fname" name="fname" style="border: 1px solid black"><br>
-    <label for="lname">Last name:</label><br>
-    <input type="text" id="lname" name="lname" style="border: 1px solid black">
-    <input type="submit" value="Start Playing">
-  </form>
+  <h2>Players</h2>
+  <div id="bracket_list"></div>
 
-  <h1>Players</h1>
-  <div id="bracket_list">
+  {% include bracket_disp.html %}
 
+  <div class="hall_of_fame">
+    <h1>Hall of Fame</h1>
+    <div class="hall_entry">
+      <i class="fa fa-trophy"></i>
+      <h2>2022</h2>
+      <h2>Lori</h2>
+      <h3>Score: 110</h3>
+    </div>
   </div>
 </div>
