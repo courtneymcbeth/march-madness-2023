@@ -285,8 +285,10 @@ function setTeams(data) {
 }
 
 function displayComments() {
-  document.getElementById("comment_form").style.visibility = "visible";
-  document.getElementById("comment_sign_in").style.visibility = "hidden";
+  if (typeof getQueryVariable('auth') !== "undefined") {
+    document.getElementById("comment_form").style.visibility = "visible";
+    document.getElementById("comment_sign_in").style.visibility = "hidden";
+  }
 
   let xhr = new XMLHttpRequest();
   var get_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues/' + issueNum.toString() + '/comments';
