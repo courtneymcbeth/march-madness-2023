@@ -283,7 +283,8 @@ nav ul li a {
 .comments {
   margin-left: 10vw;
   margin-right: 10vw;
-  height: 50vh;
+  max-height: 50vh;
+  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
