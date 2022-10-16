@@ -195,6 +195,13 @@ nav ul li a {
   text-align: left;
 }
 
+.intro_center h1 {
+  margin-top: 10vh;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  text-align: center;
+}
+
 .intro_info h2 {
   margin-top: 2vh;
 }
