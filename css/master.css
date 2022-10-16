@@ -163,6 +163,16 @@ nav ul li a {
 
 /* ------------------------------------------------------ */
 
+.hall_of_fame {
+  color: white;
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 5vh;
+}
+
+/* ------------------------------------------------------ */
+
 .full_orange {
   margin: 0px;
   height: 100vh;
