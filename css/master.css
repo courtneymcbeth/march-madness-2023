@@ -537,6 +537,12 @@ nav ul li a {
 
 .winner-pick.wrong {
   color: rgb(253, 84, 84) !important;
+  font-weight: 600;
+  text-shadow:
+   -1px -1px 0 #fff,  
+    1px -1px 0 #fff,
+    -1px 1px 0 #fff,
+     1px 1px 0 #fff;
 }
 
 .winner-pick.correct {
