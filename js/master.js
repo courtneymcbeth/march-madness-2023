@@ -40,5 +40,3 @@ async function listNav() {
 
   xhr.send();
 }
-
-listNav();
