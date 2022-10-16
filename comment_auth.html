@@ -17,11 +17,20 @@ title: Sign-in
     }
   }
 
+  function sleep(miliseconds) {
+    var currentTime = new Date().getTime();
+
+    while (currentTime + miliseconds >= new Date().getTime()) {
+    }
+  }
+
   if (typeof getQueryVariable('code') === "undefined") {
     console.log("here");
     var redir_url = getQueryVariable('redir');
     var number = getQueryVariable('number');
     redir_url += "=" + number;
+    console.log(redir_url);
+    sleep(10000);
     location.href = "https://github.com/login/oauth/authorize?client_id=1e8252b09f2cc75138a2&scope=public_repo read:user&redirect_uri=" + location.href;
   } else {
     console.log("other");
