@@ -20,6 +20,7 @@ if (typeof temp_code !== "undefined") {
   access_url += '&client_secret=56f8e566957449b8ae9a2c5b0ced45a7b8226224';
   access_url += '&code=';
   access_url += temp_code;
+  access_url += "&redirect_uri=https://courtneymcbeth.github.io/march-madness-2023/bracket_maker"
 
   var xhr = new XMLHttpRequest();
   xhr.open("POST", access_url, true);
