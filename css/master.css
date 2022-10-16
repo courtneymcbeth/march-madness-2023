@@ -283,6 +283,7 @@ nav ul li a {
 .comments {
   margin-left: 10vw;
   margin-right: 10vw;
+  margin-bottom: 4vh;
   max-height: 60vh;
   overflow-y: scroll;
   display: flex;
@@ -314,7 +315,6 @@ nav ul li a {
   display: flex;
   flex-direction: column;
   width: 80vw;
-  margin-bottom: 4vh;
 }
 
 #comment_form textarea {
