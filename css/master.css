@@ -310,6 +310,27 @@ nav ul li a {
   cursor: pointer;
 }
 
+#comment_form {
+  display: flex;
+  flex-direction: column;
+}
+
+#comment_form textarea {
+  resize: none;
+  width: 75%;
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 10px;
+  color: var(--dark-blue);
+}
+
+#comments_inside h1 {
+  font-size: 16pt;
+}
+
+#comment_form label {
+  color: white;
+}
+
 /* ------------------------------------------------------ */
 
 .full_blue_purple {

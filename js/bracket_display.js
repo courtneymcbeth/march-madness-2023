@@ -307,7 +307,7 @@ function displayComments() {
     } else {
       for (let i = 0; i < ret_data.length; i++) {
         var comm = '<div class="comment_outer"><div class="comment_top"><img src="' + ret_data[i].user.avatar_url + '"/>';
-        comm += '<h1>' + ret_data[i].user.login + '</h1></div>';
+        comm += '<h2>' + ret_data[i].user.login + '</h2></div>';
         comm += '<p>' + ret_data[i].body + "</p></div>"
         inside.innerHTML += comm;
       }
