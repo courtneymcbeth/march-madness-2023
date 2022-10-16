@@ -303,7 +303,7 @@ function displayComments() {
     var inside = document.getElementById("comments_inside");
 
     if (ret_data.length < 1) {
-      inside.innerHTML += '<h1 class="first_comment">Be the first to comment...</h1>';
+      inside.innerHTML += '<h1 id="first_comment">Be the first to comment...</h1>';
     } else {
       for (let i = 0; i < ret_data.length; i++) {
         var comm = '<div class="comment_outer"><div class="comment_top"><img src="' + ret_data[i].user.avatar_url + '"/>';
@@ -347,6 +347,10 @@ function postComment() {
       document.getElementById('comment_area').value = "";
       var ret_data = JSON.parse(this.responseText);
       console.log(ret_data)
+
+      if (typeof document.getElementById("first_comment") !== "undefined") {
+        document.getElementById("first_comment").style.display = "none";
+      }
 
       var inside = document.getElementById("comments_inside");
 
