@@ -30,7 +30,7 @@ title: Sign-in
     console.log("here");
     var redir_url = getQueryVariable('redir');
     console.log(redir_url);
-    var number = getQueryVariable('number');
+    var number = window.location.search.substring(1).split('=')[2];
     redir_url += "=" + number;
     console.log("with number");
     console.log(redir_url);
