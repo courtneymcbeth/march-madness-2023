@@ -27,20 +27,16 @@ title: Sign-in
   }
 
   if (typeof getQueryVariable('code') === "undefined") {
-    console.log("here");
     var redir_url = getQueryVariable('redir');
-    console.log(redir_url);
     var number = window.location.search.substring(1).split('=')[2];
     redir_url += "=" + number;
-    console.log("with number");
-    console.log(redir_url);
-    sleep(30000);
-    location.href = "https://github.com/login/oauth/authorize?client_id=1e8252b09f2cc75138a2&scope=public_repo read:user&redirect_uri=" + redir_url;
+    var full_redir = "https://courtneymcbeth.github.io/march-madness-2023/comment_auth?redir=" + redir_url;
+    location.href = "https://github.com/login/oauth/authorize?client_id=1e8252b09f2cc75138a2&scope=public_repo read:user&redirect_uri=" + full_redir;
   } else {
     console.log("other");
     var temp_code = getQueryVariable('code');
     var redir_var = getQueryVariable('redir');
-    var num = getQueryVariable('number');
+    var num = window.location.search.substring(1).split('=')[2];
     console.log(redir_var);
     console.log(num)
     sleep(30000);
