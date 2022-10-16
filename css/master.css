@@ -163,12 +163,21 @@ nav ul li a {
 
 /* ------------------------------------------------------ */
 
+.intro_main {
+  margin-bottom: 4vh;
+}
+
 .hall_of_fame {
   color: white;
   width: 80vw;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ------------------------------------------------------ */
