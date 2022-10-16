@@ -346,7 +346,13 @@ function postComment() {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 201) {
       var ret_data = JSON.parse(this.responseText);
       console.log(ret_data)
-      displayComments();
+
+      var inside = document.getElementById("comments_inside");
+
+      var comm = '<div class="comment_outer"><div class="comment_top"><img src="' + ret_data.user.avatar_url + '"/>';
+      comm += '<h2>' + ret_data.user.login + '</h2></div>';
+      comm += '<p>' + ret_data.body + "</p></div>"
+      inside.innerHTML += comm;
     }
   }
   xhr.send(jsonString);
