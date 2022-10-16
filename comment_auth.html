@@ -17,10 +17,12 @@ title: Sign-in
     }
   }
 
-  if (typeof getQueryVariable('code') !== "undefined") {
+  if (typeof getQueryVariable('code') === "undefined") {
+    console.log("here");
     var redir_url = getQueryVariable('redir');
     location.href = "https://github.com/login/oauth/authorize?client_id=1e8252b09f2cc75138a2&scope=public_repo read:user&redirect_uri=" + location.href;
   } else {
+    console.log("other");
     var temp_code = getQueryVariable('code');
     var redir_var = getQueryVariable('redir');
 
