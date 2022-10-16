@@ -29,8 +29,10 @@ title: Sign-in
   if (typeof getQueryVariable('code') === "undefined") {
     console.log("here");
     var redir_url = getQueryVariable('redir');
+    console.log(redir_url);
     var number = getQueryVariable('number');
     redir_url += "=" + number;
+    console.log("with number");
     console.log(redir_url);
     sleep(30000);
     location.href = "https://github.com/login/oauth/authorize?client_id=1e8252b09f2cc75138a2&scope=public_repo read:user&redirect_uri=" + redir_url;
