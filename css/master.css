@@ -169,6 +169,7 @@ nav ul li a {
 
 .hall_of_fame {
   margin-bottom: 4vh;
+  color: white;
 }
 
 .hall_of_fame h1 {
@@ -282,6 +283,12 @@ nav ul li a {
 #bracket_list {
   margin-bottom: 5vh;
   margin-top: 2vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #bracket_list a {
