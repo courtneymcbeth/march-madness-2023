@@ -171,6 +171,12 @@ nav ul li a {
   margin-bottom: 4vh;
 }
 
+.hall_of_fame h1 {
+  color: white;
+  width: 100vh;
+  text-align: center;
+}
+
 .hall_entries {
   color: white;
   width: 80vw;
