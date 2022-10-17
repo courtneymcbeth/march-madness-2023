@@ -180,6 +180,17 @@ nav ul li a {
   align-items: center;
 }
 
+.hall_entry {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hall_entry .fa-trophy {
+  font-size: 30pt;
+}
+
 /* ------------------------------------------------------ */
 
 .full_orange {
