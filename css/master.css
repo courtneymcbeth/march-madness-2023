@@ -196,6 +196,9 @@ nav ul li a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid white;
 }
 
 .hall_entry .fa-trophy {
@@ -227,6 +230,10 @@ nav ul li a {
   min-height: 100vh;
   width: 100vw;
   color: white;
+}
+
+.intro_main h1 {
+  text-align:center !important;
 }
 
 .intro_info {
