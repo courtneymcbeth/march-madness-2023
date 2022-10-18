@@ -308,6 +308,7 @@ nav ul li a {
   padding-top: 10px;
   padding-bottom: 10px;
   align-items: center;
+  min-width: 400px;
 }
 
 .brack_over img {
