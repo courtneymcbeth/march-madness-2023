@@ -201,6 +201,7 @@ nav ul li a {
   color: white;
   border-radius: 10px;
   border: 1px solid white;
+  padding: 10px;
 }
 
 .hall_entry .fa-trophy {
