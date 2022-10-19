@@ -519,7 +519,7 @@ nav ul li a {
   margin-bottom: 5vh;
   padding: 10px;
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: #31fb2d;
+  background-color: #111fed;
   color: white;
   text-transform: uppercase;
   font-size: 20pt;
@@ -528,9 +528,9 @@ nav ul li a {
   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
-.full_green {
-  background: rgb(0,255,70);
-  background: linear-gradient(306deg, rgba(0,255,70,1) 0%, rgba(41,205,255,1) 100%);
+.full_blue_red {
+  background: rgb(255,0,0);
+  background: linear-gradient(306deg, rgba(255,0,0,1) 0%, rgba(46,41,255,1) 100%);
   margin: 0px;
   height: 100vh;
   width: 100vw;
