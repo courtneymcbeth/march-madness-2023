@@ -17,15 +17,19 @@ function getQueryVariable(variable) {
 }
 
 function playAudioHome() {
-  if (typeof getQueryVariable("redir") === 'undefined' || getQueryVariable("redir").includes("false")) {
-    document.getElementById("audio_player1").play();
-  } else {
-    document.getElementById("audio_player2").play();
-  }
+  document.body.addEventListener("mousemove", function () {
+    if (typeof getQueryVariable("redir") === 'undefined' || getQueryVariable("redir").includes("false")) {
+      document.getElementById("audio_player1").play();
+    } else {
+      document.getElementById("audio_player2").play();
+    }
+  })
 }
 
 function playAudio() {
-  document.getElementById("audio_player").play();
+  document.body.addEventListener("mousemove", function () {
+    document.getElementById("audio_player").play();
+  })
 }
 
 async function listNav() {
