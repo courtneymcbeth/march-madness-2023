@@ -485,7 +485,7 @@ function checkSubmission() {
     if (this.readyState === XMLHttpRequest.DONE && this.status === 201) {
       var ret_data = JSON.parse(this.responseText);
       console.log(ret_data)
-      location.href = 'https://courtneymcbeth.github.io/march-madness-2023/';
+      location.href = 'https://courtneymcbeth.github.io/march-madness-2023/?redir=true';
     }
   }
   xhr.send(jsonString);
