@@ -16,6 +16,18 @@ function getQueryVariable(variable) {
   }
 }
 
+function playAudioHome() {
+  if (typeof getQueryVariable("redir") === 'undefined' || getQueryVariable("redir").includes("false")) {
+    document.getElementById("audio_player1").play();
+  } else {
+    document.getElementById("audio_player2").play();
+  }
+}
+
+function playAudio() {
+  document.getElementById("audio_player").play();
+}
+
 async function listNav() {
   let xhr = new XMLHttpRequest();
   var get_url = 'https://api.github.com/repos/courtneymcbeth/march-madness-2023/issues';

@@ -28,6 +28,10 @@ a {
   text-decoration: none;
 }
 
+audio {
+  display:none;
+}
+
 /* Top Navigation Bar */
 nav {
   overflow-x: scroll;
