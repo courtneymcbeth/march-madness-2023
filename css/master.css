@@ -30,8 +30,8 @@ a {
 
 audio {
   position: fixed;
-  top: 95vh;
-  left: 90vw;
+  top: 80vh;
+  left: 75vw;
   z-index: 2;
 }
 
