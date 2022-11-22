@@ -168,7 +168,12 @@ nav ul li a {
 /* ------------------------------------------------------ */
 
 .intro_main {
+  margin-top: 10vh;
   margin-bottom: 10vh;
+}
+
+#point_vals {
+  min-width: 35vw;
 }
 
 .hall_of_fame {
