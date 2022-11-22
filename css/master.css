@@ -29,7 +29,10 @@ a {
 }
 
 audio {
-  display:none;
+  position: fixed;
+  top: 95vh;
+  left: 90vw;
+  z-index: 2;
 }
 
 /* Top Navigation Bar */

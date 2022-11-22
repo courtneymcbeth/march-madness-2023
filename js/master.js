@@ -16,27 +16,12 @@ function getQueryVariable(variable) {
   }
 }
 
-var played = false;
 function playAudioHome() {
-  document.body.addEventListener("mousemove", function () {
-    if (!played) {
-      played = true;
-      if (typeof getQueryVariable("redir") === 'undefined' || getQueryVariable("redir").includes("false")) {
-        document.getElementById("audio_player1").play();
-      } else {
-        document.getElementById("audio_player2").play();
-      }
-    }
-  })
-}
-
-function playAudio() {
-  document.body.addEventListener("mousemove", function () {
-    if (!played) {
-      played = true;
-      document.getElementById("audio_player").play();
-    }
-  })
+  if (typeof getQueryVariable("redir") === 'undefined' || getQueryVariable("redir").includes("false")) {
+    document.getElementById("audio_player2").style.visibility = "hidden";
+  } else {
+    document.getElementById("audio_player1").style.visibility = "hidden";
+  }
 }
 
 async function listNav() {
