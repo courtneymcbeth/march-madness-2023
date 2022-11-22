@@ -40,7 +40,7 @@ function displayBracks(bracks) {
     brackHTML += '<h2 class="rank">#' + (i + 1).toString() + '</h2>';
     brackHTML += '<h2>' + b.name + '</h2>';
     brackHTML += '</div><div class="brack_over_data_bot">';
-    brackHTML += '<h3>Score: ' + b.score.toString() + '</h3>';
+    brackHTML += '<h3>Score: ' + b.score.toString() + ' - Champion: ' + b.winner + '</h3>';
     brackHTML += '</div></div></div></a>';
 
     brack_list.innerHTML += brackHTML;
