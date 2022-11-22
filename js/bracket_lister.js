@@ -62,13 +62,13 @@ function readTextFile(file, callback) {
 
 function brackToObj(data) {
   obj = {};
-  data = JSON.parse(data.body);
+  inner_data = JSON.parse(data.body);
 
   obj["imgurl"] = data["user"]["avatar_url"];
   obj["name"] = data["title"];
   obj["number"] = data["number"];
   obj["score"] = calcScore(data);
-  obj["winner"] = data.winner;
+  obj["winner"] = inner_data.winner;
   return obj;
 }
 
