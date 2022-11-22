@@ -67,7 +67,7 @@ function brackToObj(data) {
   obj["imgurl"] = data["user"]["avatar_url"];
   obj["name"] = data["title"];
   obj["number"] = data["number"];
-  obj["score"] = calcScore(data);
+  obj["score"] = calcScore(inner_data);
   obj["winner"] = inner_data.winner;
   return obj;
 }
