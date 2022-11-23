@@ -46,9 +46,9 @@ function fillInBlanks(data) {
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("west-r1-" + i.toString()).children;
     children[0].innerText = data.west.first[idx];
-    children[0].innerHTML += '<span class="score">' + data.seeds.west[idx].toString + '</span>';
+    children[0].innerHTML += '<span class="score">' + data.seeds.west[idx].toString() + '</span>';
     children[1].innerText = data.west.first[idx + 1];
-    children[1].innerHTML += '<span class="score">' + data.seeds.west[idx + 1].toString + '</span>';
+    children[1].innerHTML += '<span class="score">' + data.seeds.west[idx + 1].toString() + '</span>';
     idx = idx + 2;
   }
 
@@ -56,9 +56,9 @@ function fillInBlanks(data) {
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("east-r1-" + i.toString()).children;
     children[0].innerText = data.east.first[idx];
-    children[0].innerHTML += '<span class="score">' + data.seeds.east[idx].toString + '</span>';
+    children[0].innerHTML += '<span class="score">' + data.seeds.east[idx].toString() + '</span>';
     children[1].innerText = data.east.first[idx + 1];
-    children[1].innerHTML += '<span class="score">' + data.seeds.east[idx + 1].toString + '</span>';
+    children[1].innerHTML += '<span class="score">' + data.seeds.east[idx + 1].toString() + '</span>';
     idx = idx + 2;
   }
 
@@ -66,9 +66,9 @@ function fillInBlanks(data) {
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("south-r1-" + i.toString()).children;
     children[0].innerText = data.south.first[idx];
-    children[0].innerHTML += '<span class="score">' + data.seeds.south[idx].toString + '</span>';
+    children[0].innerHTML += '<span class="score">' + data.seeds.south[idx].toString() + '</span>';
     children[1].innerText = data.south.first[idx + 1];
-    children[1].innerHTML += '<span class="score">' + data.seeds.south[idx + 1].toString + '</span>';
+    children[1].innerHTML += '<span class="score">' + data.seeds.south[idx + 1].toString() + '</span>';
     idx = idx + 2;
   }
 
@@ -76,9 +76,9 @@ function fillInBlanks(data) {
   for (let i = 1; i < 9; i++) {
     children = document.getElementById("midwest-r1-" + i.toString()).children;
     children[0].innerText = data.midwest.first[idx];
-    children[0].innerHTML += '<span class="score">' + data.seeds.midwest[idx].toString + '</span>';
+    children[0].innerHTML += '<span class="score">' + data.seeds.midwest[idx].toString() + '</span>';
     children[1].innerText = data.midwest.first[idx + 1];
-    children[1].innerHTML += '<span class="score">' + data.seeds.midwest[idx + 1].toString + '</span>';
+    children[1].innerHTML += '<span class="score">' + data.seeds.midwest[idx + 1].toString() + '</span>';
     idx = idx + 2;
   }
 }
